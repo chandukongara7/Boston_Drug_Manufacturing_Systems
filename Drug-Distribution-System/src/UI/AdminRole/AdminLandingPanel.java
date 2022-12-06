@@ -8,12 +8,12 @@ package UI.AdminRole;
  *
  * @author chandukongara
  */
-public class AdminWorkPanel extends javax.swing.JPanel {
+public class AdminLandingPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form AdminWorkPanel
      */
-    public AdminWorkPanel() {
+    public AdminLandingPanel() {
         initComponents();
     }
 
