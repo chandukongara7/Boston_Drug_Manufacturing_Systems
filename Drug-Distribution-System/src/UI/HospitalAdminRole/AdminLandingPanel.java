@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UI.DrugInventoryAdmin;
+package UI.HospitalAdminRole;
 
 /**
  *
@@ -11,7 +11,7 @@ package UI.DrugInventoryAdmin;
 public class AdminLandingPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form AdminWorkPanel
+     * Creates new form AdminLandingPanel
      */
     public AdminLandingPanel() {
         initComponents();
@@ -26,18 +26,12 @@ public class AdminLandingPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnManageUser = new javax.swing.JButton();
-        btnManageEmployee = new javax.swing.JButton();
         btnManageOrganisation = new javax.swing.JButton();
         lblEnterpriseValue = new javax.swing.JLabel();
         lblEnterpriseTitle = new javax.swing.JLabel();
         lblAdminTitle = new javax.swing.JLabel();
-
-        btnManageUser.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        btnManageUser.setText("Manage User");
-
-        btnManageEmployee.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        btnManageEmployee.setText("Manage Employee");
+        btnManageUser = new javax.swing.JButton();
+        btnManageEmployee = new javax.swing.JButton();
 
         btnManageOrganisation.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         btnManageOrganisation.setText("Manage Organisation");
@@ -55,7 +49,13 @@ public class AdminLandingPanel extends javax.swing.JPanel {
 
         lblAdminTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         lblAdminTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAdminTitle.setText("Drug Inventory Administrator");
+        lblAdminTitle.setText("Hospital Administrator");
+
+        btnManageUser.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        btnManageUser.setText("Manage User");
+
+        btnManageEmployee.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        btnManageEmployee.setText("Manage Employee");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

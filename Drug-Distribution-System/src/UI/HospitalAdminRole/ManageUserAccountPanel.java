@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package UI.DrugInventoryAdmin;
+package UI.HospitalAdminRole;
 
 /**
  *
@@ -26,36 +26,21 @@ public class ManageUserAccountPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblPassword = new javax.swing.JLabel();
-        lblUserName = new javax.swing.JLabel();
-        lblRole = new javax.swing.JLabel();
-        lblEmployee = new javax.swing.JLabel();
-        lblOrganisation = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        btnCreate = new javax.swing.JButton();
-        fielddPassword = new javax.swing.JPasswordField();
-        txtUsername = new javax.swing.JTextField();
-        cmbRole = new javax.swing.JComboBox<>();
-        cmbEmployee = new javax.swing.JComboBox<>();
+        lblOrganisation = new javax.swing.JLabel();
+        lblEmployee = new javax.swing.JLabel();
         cmbOrganisation = new javax.swing.JComboBox<>();
-
-        lblPassword.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        lblPassword.setText("Password:");
-
-        lblUserName.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        lblUserName.setText("User Name:");
-
-        lblRole.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        lblRole.setText("User Role:");
-
-        lblEmployee.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        lblEmployee.setText("Employee:");
-
-        lblOrganisation.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        lblOrganisation.setText("Organisation:");
+        lblRole = new javax.swing.JLabel();
+        cmbEmployee = new javax.swing.JComboBox<>();
+        cmbRole = new javax.swing.JComboBox<>();
+        lblUserName = new javax.swing.JLabel();
+        lblPassword = new javax.swing.JLabel();
+        txtUsername = new javax.swing.JTextField();
+        fielddPassword = new javax.swing.JPasswordField();
+        btnCreate = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -70,13 +55,26 @@ public class ManageUserAccountPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("User Account Management");
+        lblOrganisation.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblOrganisation.setText("Organisation:");
 
-        jButton2.setText("Previous");
+        lblEmployee.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblEmployee.setText("Employee:");
 
-        btnCreate.setText("Create User ");
+        cmbOrganisation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        lblRole.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblRole.setText("User Role:");
+
+        cmbEmployee.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        cmbRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        lblUserName.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblUserName.setText("User Name:");
+
+        lblPassword.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblPassword.setText("Password:");
 
         fielddPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,11 +82,13 @@ public class ManageUserAccountPanel extends javax.swing.JPanel {
             }
         });
 
-        cmbRole.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        btnCreate.setText("Create User ");
 
-        cmbEmployee.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jButton2.setText("Previous");
 
-        cmbOrganisation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("User Account Management");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
