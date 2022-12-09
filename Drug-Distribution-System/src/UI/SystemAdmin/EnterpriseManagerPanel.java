@@ -59,7 +59,7 @@ public class EnterpriseManagerPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblEnterprise);
 
-        lblEntManager.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        lblEntManager.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         lblEntManager.setText("Enterprise Manager");
 
         lblEntName.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
@@ -142,7 +142,7 @@ public class EnterpriseManagerPanel extends javax.swing.JPanel {
                         .addComponent(lblEntArea)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(cmbArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPrevious, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
