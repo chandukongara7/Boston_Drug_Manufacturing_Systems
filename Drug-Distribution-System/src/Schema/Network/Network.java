@@ -13,7 +13,7 @@ import Schema.Enterprise.EnterpriseDirectory;
 public class Network {
     private String name;
     private EnterpriseDirectory enterpriseDirectory;
-    
+     
     public Network(){
         enterpriseDirectory = new EnterpriseDirectory();
     }
