@@ -44,7 +44,7 @@ public class MainJFrame extends javax.swing.JFrame {
         lblWelcome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblWelcome.setText("Welcome");
 
-        lblDDSTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblDDSTitle.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         lblDDSTitle.setText("Drugs Distribution System");
 
         lblUsername.setText("Username:-");
@@ -127,11 +127,6 @@ public class MainJFrame extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSplitPane2)
-            .addGap(0, 692, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 505, Short.MAX_VALUE)
         );
 
         pack();
