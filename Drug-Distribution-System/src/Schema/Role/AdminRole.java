@@ -16,7 +16,7 @@ import UI.AdminRole.AdminLandingPanel;
  *
  * @author chandukongara
  */
-public abstract class AdminRole extends Role {
+public class AdminRole extends Role {
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
         return new AdminLandingPanel(userProcessContainer, enterprise);
     }

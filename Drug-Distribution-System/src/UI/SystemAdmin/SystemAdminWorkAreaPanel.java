@@ -4,6 +4,9 @@
  */
 package UI.SystemAdmin;
 
+import Schema.Schema.EcoSystem;
+import javax.swing.JPanel;
+
 /**
  *
  * @author junaid patel
@@ -15,6 +18,10 @@ public class SystemAdminWorkAreaPanel extends javax.swing.JPanel {
      */
     public SystemAdminWorkAreaPanel() {
         initComponents();
+    }
+
+    public SystemAdminWorkAreaPanel(JPanel userProcessContainer, EcoSystem system) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
@@ -149,25 +156,16 @@ public class SystemAdminWorkAreaPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageEnterpriseAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEnterpriseAdminActionPerformed
-        ManageEnterpriseAdminJPanel manageAdminJPnl = new ManageEnterpriseAdminJPanel(userprocessContainer,system);
-        userprocessContainer.add("manageNtwrkJPnl",manageAdminJPnl);
-        CardLayout crdlyt = (CardLayout) userprocessContainer.getLayout();
-        crdlyt.next(userprocessContainer);        // TODO add your handling code here:
+             // TODO add your handling code here:
     }//GEN-LAST:event_btnManageEnterpriseAdminActionPerformed
 
     private void btnManageEnterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEnterpriseActionPerformed
-        ManageEnterpiseJPanel mngEntJPanel = new  ManageEnterpiseJPanel(userprocessContainer, system);
-        userprocessContainer.add("mngEntJPanel", mngEntJPanel);
-        CardLayout crdlyt = (CardLayout) userprocessContainer.getLayout();
-        crdlyt.next(userprocessContainer);
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_btnManageEnterpriseActionPerformed
 
     private void btnManageNetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageNetworkActionPerformed
-        ManageNetworkJPanel manageNtwrkJPnl = new ManageNetworkJPanel(userprocessContainer,system);
-        userprocessContainer.add("manageNtwrkJPnl",manageNtwrkJPnl);
-        CardLayout crdlyt = (CardLayout) userprocessContainer.getLayout();
-        crdlyt.next(userprocessContainer);
+     
         // TODO add your handling code here:
     }//GEN-LAST:event_btnManageNetworkActionPerformed
 

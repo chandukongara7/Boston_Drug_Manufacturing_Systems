@@ -10,7 +10,7 @@ import java.util.Date;
  *
  * @author chandukongara
  */
-class DoctorPrescription {
+public class DoctorPrescription {
     private String medicineName;
     private int numberOfDays;
     private int timesInADay;
