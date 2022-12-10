@@ -84,14 +84,24 @@ public class PharmaLandingPanel extends javax.swing.JPanel {
 
         btnCheckStatus.setText("Check Status");
 
+        lblSrNo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblSrNo.setForeground(new java.awt.Color(255, 255, 255));
         lblSrNo.setText("Sr No:");
 
+        lblMedicineName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblMedicineName.setForeground(new java.awt.Color(255, 255, 255));
         lblMedicineName.setText("Medicine Name:");
 
+        lblRequiredQuantity.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblRequiredQuantity.setForeground(new java.awt.Color(255, 255, 255));
         lblRequiredQuantity.setText("Required Quantity:");
 
+        lblAvailableQuantity.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblAvailableQuantity.setForeground(new java.awt.Color(255, 255, 255));
         lblAvailableQuantity.setText("Available Quantity:");
 
+        lblReorderStatus.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblReorderStatus.setForeground(new java.awt.Color(255, 255, 255));
         lblReorderStatus.setText("Reorder Status:");
 
         btnAddMedicine.setText("Add Medicine");
@@ -117,7 +127,8 @@ public class PharmaLandingPanel extends javax.swing.JPanel {
         ));
         jScrollPane3.setViewportView(tblViewRequestDoctor);
 
-        lblViewRequestsFromDoctor.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblViewRequestsFromDoctor.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblViewRequestsFromDoctor.setForeground(new java.awt.Color(255, 255, 255));
         lblViewRequestsFromDoctor.setText("View Requests From Doctor:");
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
@@ -187,7 +198,7 @@ public class PharmaLandingPanel extends javax.swing.JPanel {
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                             .addComponent(btnViewDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(btnViewRequests, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE))
+                                            .addComponent(btnViewRequests, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE))
                                         .addComponent(btnAddMedicine, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,14 +209,14 @@ public class PharmaLandingPanel extends javax.swing.JPanel {
                                                 .addComponent(txtAvailableQuantity)
                                                 .addComponent(txtReorderStatus, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)))
                                         .addComponent(btnRequestsfromDoctor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblViewRequestsFromDoctor, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 571, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(64, 64, 64))
                             .addComponent(jScrollPane2))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPharmacyTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(lblPharmacyTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 18, Short.MAX_VALUE)
                 .addGap(26, 26, 26))
         );
         jPanel1Layout.setVerticalGroup(
@@ -253,7 +264,7 @@ public class PharmaLandingPanel extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(btnRequestsfromDoctor))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
                 .addComponent(jButton6)
                 .addContainerGap())
         );
