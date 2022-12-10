@@ -4,7 +4,7 @@
  */
 package Schema.Role;
 
-import Schema.EcoSystem;
+import Schema.Schema.EcoSystem;
 import Schema.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import Schema.Enterprise.Enterprise;
