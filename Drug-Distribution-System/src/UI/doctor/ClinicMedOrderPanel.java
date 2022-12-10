@@ -31,9 +31,13 @@ public class ClinicMedOrderPanel extends javax.swing.JPanel {
         cmbSelectMed = new javax.swing.JComboBox<>();
         lblSelectMed = new javax.swing.JLabel();
         lblMedQuant = new javax.swing.JLabel();
-        cmbMedQuant = new javax.swing.JComboBox<>();
         btnOrderMedPrevious = new javax.swing.JButton();
+        cmbMedQuant = new javax.swing.JComboBox<>();
+        jPanel1 = new javax.swing.JPanel();
         lblOrderMed = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+
+        setBackground(new java.awt.Color(32, 47, 90));
 
         tblMedOrder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -51,54 +55,87 @@ public class ClinicMedOrderPanel extends javax.swing.JPanel {
         cmbSelectMed.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         lblSelectMed.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblSelectMed.setForeground(new java.awt.Color(255, 255, 255));
         lblSelectMed.setText("Select Meds:");
 
         lblMedQuant.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblMedQuant.setForeground(new java.awt.Color(255, 255, 255));
         lblMedQuant.setText("Add Quantity");
 
-        cmbMedQuant.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        btnOrderMedPrevious.setText("Previous");
+        btnOrderMedPrevious.setIcon(new javax.swing.ImageIcon("/Users/lakshyagupta/Downloads/arrow-left-2.png")); // NOI18N
         btnOrderMedPrevious.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOrderMedPreviousActionPerformed(evt);
             }
         });
 
-        lblOrderMed.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        cmbMedQuant.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        lblOrderMed.setFont(new java.awt.Font("Shree Devanagari 714", 0, 24)); // NOI18N
         lblOrderMed.setText("Order Medicine");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 40, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(lblOrderMed)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(lblOrderMed)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblOrderMed)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(lblSelectMed)
-                                .addGap(18, 18, 18)
-                                .addComponent(cmbSelectMed, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(lblMedQuant)))
+                        .addComponent(btnOrderMedPrevious, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblSelectMed)
+                        .addGap(18, 18, 18)
+                        .addComponent(cmbSelectMed, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblMedQuant)
                         .addGap(27, 27, 27)
                         .addComponent(cmbMedQuant, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(111, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnOrderMedPrevious)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 709, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 709, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(46, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(84, Short.MAX_VALUE)
-                .addComponent(lblOrderMed)
-                .addGap(65, 65, 65)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmbSelectMed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSelectMed)
@@ -106,9 +143,9 @@ public class ClinicMedOrderPanel extends javax.swing.JPanel {
                     .addComponent(cmbMedQuant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(btnOrderMedPrevious)
-                .addGap(239, 239, 239))
+                .addGap(26, 26, 26)
+                .addComponent(btnOrderMedPrevious, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(253, 253, 253))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -121,6 +158,8 @@ public class ClinicMedOrderPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnOrderMedPrevious;
     private javax.swing.JComboBox<String> cmbMedQuant;
     private javax.swing.JComboBox<String> cmbSelectMed;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblMedQuant;
     private javax.swing.JLabel lblOrderMed;
