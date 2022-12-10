@@ -42,11 +42,16 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(32, 47, 90));
 
+        setBackground(new java.awt.Color(204, 204, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         lblOrganisationFilter.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         lblOrganisationFilter.setForeground(new java.awt.Color(255, 255, 255));
         lblOrganisationFilter.setText("Organisation Filter:");
 
         cmbOrganisationFilter.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        spTable.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -150,7 +155,7 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
                         .addComponent(btnPrevious, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCreateEmployee, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,11 +178,8 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnPrevious)
-                            .addComponent(btnCreateEmployee)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(spTable, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(202, Short.MAX_VALUE))
+                            .addComponent(btnCreateEmployee))))
+                .addContainerGap(245, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

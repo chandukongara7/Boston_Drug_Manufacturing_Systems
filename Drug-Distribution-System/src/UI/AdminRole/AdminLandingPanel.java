@@ -42,7 +42,13 @@ public class AdminLandingPanel extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         lblAdminTitle = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(32, 47, 90));
+        setBackground(new java.awt.Color(204, 204, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblAdminTitle.setBackground(new java.awt.Color(0, 0, 0));
+        lblAdminTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        lblAdminTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAdminTitle.setText("Administrator");
 
         lblEnterpriseTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         lblEnterpriseTitle.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,8 +123,7 @@ public class AdminLandingPanel extends javax.swing.JPanel {
                     .addComponent(btnManageOrganisation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnManageEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnManageUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(521, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,7 +139,7 @@ public class AdminLandingPanel extends javax.swing.JPanel {
                 .addComponent(btnManageEmployee)
                 .addGap(41, 41, 41)
                 .addComponent(btnManageUser)
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addContainerGap(328, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
