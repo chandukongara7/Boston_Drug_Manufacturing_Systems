@@ -4,6 +4,13 @@
  */
 package UI.doctor;
 
+import Schema.Enterprise.Enterprise;
+import Schema.Network.Network;
+import Schema.Organization.DoctorOrganization;
+import Schema.Schema.EcoSystem;
+import Schema.UserAccount.UserAccount;
+import javax.swing.JPanel;
+
 /**
  *
  * @author lakshyagupta
@@ -15,6 +22,10 @@ public class DoctorLandingPanel extends javax.swing.JPanel {
      */
     public DoctorLandingPanel() {
         initComponents();
+    }
+
+    public DoctorLandingPanel(JPanel userProcessContainer, UserAccount account, DoctorOrganization doctorOrganization, Enterprise enterprise, EcoSystem business, Network network) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**

@@ -4,7 +4,7 @@
  */
 package Schema.Organization;
 
-import Schema.Doctor.DoctorPrescription;
+import Schema.Doctor;
 import Schema.Role.DoctorRole;
 import Schema.Role.Role;
 import java.util.ArrayList;

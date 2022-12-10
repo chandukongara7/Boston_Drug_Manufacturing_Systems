@@ -4,7 +4,7 @@
  */
 package Schema.Organization;
 
-import Schema.Doctor.DoctorPrescription;
+import Schema.DoctorPrescription;
 import Schema.Employee.EmployeeDirectory;
 import Schema.Role.Role;
 import Schema.UserAccount.UserAccountDirectory;
