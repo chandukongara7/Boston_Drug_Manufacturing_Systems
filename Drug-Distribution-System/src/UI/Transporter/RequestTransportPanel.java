@@ -27,25 +27,28 @@ public class RequestTransportPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         lblReqTime = new javax.swing.JLabel();
-        lblReqTrans = new javax.swing.JLabel();
         cmbTime = new javax.swing.JComboBox<>();
         cmbAmPm = new javax.swing.JComboBox<>();
         lblLicenseNum = new javax.swing.JLabel();
         txtLicenseNum = new javax.swing.JTextField();
         btnTransPrevious = new javax.swing.JButton();
         btnTransRespond = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        lblReqTrans = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(32, 47, 90));
 
         lblReqTime.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblReqTime.setForeground(new java.awt.Color(255, 255, 255));
         lblReqTime.setText("Delivery Time Requested");
-
-        lblReqTrans.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        lblReqTrans.setText("Request Transport");
 
         cmbTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", " " }));
 
         cmbAmPm.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AM", "PM" }));
 
         lblLicenseNum.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblLicenseNum.setForeground(new java.awt.Color(255, 255, 255));
         lblLicenseNum.setText("Vechicle License Number");
 
         btnTransPrevious.setText("Previous");
@@ -57,6 +60,42 @@ public class RequestTransportPanel extends javax.swing.JPanel {
 
         btnTransRespond.setText("Respond");
 
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 39, Short.MAX_VALUE)
+        );
+
+        lblReqTrans.setFont(new java.awt.Font("Helvetica", 0, 24)); // NOI18N
+        lblReqTrans.setText("REQUEST TRANSPORT");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(lblReqTrans)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(lblReqTrans)
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -64,6 +103,10 @@ public class RequestTransportPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(82, 82, 82)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnTransPrevious, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnTransRespond, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -74,20 +117,15 @@ public class RequestTransportPanel extends javax.swing.JPanel {
                         .addGap(128, 128, 128)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lblLicenseNum, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtLicenseNum)))
-                    .addComponent(lblReqTrans)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnTransPrevious, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(btnTransRespond, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtLicenseNum))))
                 .addContainerGap(161, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(lblReqTrans)
-                .addGap(76, 76, 76)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblReqTime, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblLicenseNum, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -100,7 +138,7 @@ public class RequestTransportPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTransPrevious, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnTransRespond, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(332, Short.MAX_VALUE))
+                .addContainerGap(336, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -114,6 +152,8 @@ public class RequestTransportPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnTransRespond;
     private javax.swing.JComboBox<String> cmbAmPm;
     private javax.swing.JComboBox<String> cmbTime;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblLicenseNum;
     private javax.swing.JLabel lblReqTime;
     private javax.swing.JLabel lblReqTrans;
