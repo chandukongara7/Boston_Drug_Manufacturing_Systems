@@ -47,21 +47,28 @@ public class DoctorPrescPanel extends javax.swing.JPanel {
         tblPresMeds = new javax.swing.JTable();
         lblPresArea = new javax.swing.JLabel();
         btnPresSave = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
+
+        setBackground(new java.awt.Color(32, 47, 90));
 
         lblPName.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblPName.setForeground(new java.awt.Color(255, 255, 255));
         lblPName.setText("Patient's Name :");
 
         lblPGender.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblPGender.setForeground(new java.awt.Color(255, 255, 255));
         lblPGender.setText("Patient's Gender :");
         lblPGender.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         lblPAge.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblPAge.setForeground(new java.awt.Color(255, 255, 255));
         lblPAge.setText("Patient's Age :");
         lblPAge.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         lblDiag.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblDiag.setForeground(new java.awt.Color(255, 255, 255));
         lblDiag.setText("Diagnosis:");
         lblDiag.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -70,20 +77,24 @@ public class DoctorPrescPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(txtDiag);
 
         lblPresMeds.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblPresMeds.setForeground(new java.awt.Color(255, 255, 255));
         lblPresMeds.setText("Prescribed Meds :");
         lblPresMeds.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         comMeds.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         lblFreq.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblFreq.setForeground(new java.awt.Color(255, 255, 255));
         lblFreq.setText("Frequency :");
         lblFreq.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         lblFreqDays.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        lblFreqDays.setForeground(new java.awt.Color(255, 255, 255));
         lblFreqDays.setText("Days");
         lblFreqDays.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         lblFreqDaily.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        lblFreqDaily.setForeground(new java.awt.Color(255, 255, 255));
         lblFreqDaily.setText("Daily");
         lblFreqDaily.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -109,13 +120,47 @@ public class DoctorPrescPanel extends javax.swing.JPanel {
         jScrollPane2.setViewportView(tblPresMeds);
 
         lblPresArea.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        lblPresArea.setForeground(new java.awt.Color(255, 255, 255));
         lblPresArea.setText("Prescription Area");
 
         btnPresSave.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         btnPresSave.setText("Save");
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 39, Short.MAX_VALUE)
+        );
+
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jLabel1.setText("Doctor Work Area");
+        jLabel1.setText("DOCTOR WORK AREA");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel1)
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -149,7 +194,6 @@ public class DoctorPrescPanel extends javax.swing.JPanel {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(564, 564, 564)
                                         .addComponent(btnPresSave, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(lblPresArea)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                             .addComponent(lblPresMeds)
@@ -167,19 +211,16 @@ public class DoctorPrescPanel extends javax.swing.JPanel {
                                             .addComponent(spnFreqDays, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGap(0, 20, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jSeparator2)))))
+                                .addComponent(lblPresArea)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -202,7 +243,7 @@ public class DoctorPrescPanel extends javax.swing.JPanel {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblPresArea)
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -217,7 +258,7 @@ public class DoctorPrescPanel extends javax.swing.JPanel {
                     .addComponent(spnFreqDays, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(3, 3, 3)
                 .addComponent(btnPresSave, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -226,10 +267,11 @@ public class DoctorPrescPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnPresSave;
     private javax.swing.JComboBox<String> comMeds;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblDiag;
     private javax.swing.JLabel lblFreq;
     private javax.swing.JLabel lblFreqDaily;
