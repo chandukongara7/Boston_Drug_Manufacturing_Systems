@@ -4,6 +4,12 @@
  */
 package UI.DrugInventoryWareHouse;
 
+import Schema.Network.Network;
+import Schema.Organization.Organization;
+import Schema.Schema.EcoSystem;
+import Schema.UserAccount.UserAccount;
+import javax.swing.JPanel;
+
 /**
  *
  * @author chandukongara
@@ -15,6 +21,10 @@ public class DrugInventoryWorkAreaPanel extends javax.swing.JPanel {
      */
     public DrugInventoryWorkAreaPanel() {
         initComponents();
+    }
+
+    public DrugInventoryWorkAreaPanel(JPanel userProcessContainer, EcoSystem business, UserAccount account, Organization organization, Network network) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**

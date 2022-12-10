@@ -4,7 +4,7 @@
  */
 package Schema.Organization;
 
-import Schema.DoctorPrescription;
+import Schema.Doctor.DoctorPrescription;
 import Schema.Employee.EmployeeDirectory;
 import Schema.Role.Role;
 import Schema.UserAccount.UserAccountDirectory;
@@ -16,7 +16,7 @@ import java.util.ArrayList;
  *
  * @author chandukongara
  */
-public class Organization {
+public abstract class Organization {
     private String name;
     private WorkQueue workQueue;
     private EmployeeDirectory employeeDirectory;

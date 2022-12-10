@@ -4,6 +4,11 @@
  */
 package UI.Transporter;
 
+import Schema.Organization.Organization;
+import Schema.Schema.EcoSystem;
+import Schema.UserAccount.UserAccount;
+import javax.swing.JPanel;
+
 /**
  *
  * @author lakshyagupta
@@ -15,6 +20,10 @@ public class TransportJobPanel extends javax.swing.JPanel {
      */
     public TransportJobPanel() {
         initComponents();
+    }
+
+    public TransportJobPanel(JPanel userProcessContainer, UserAccount account, Organization organization, EcoSystem business) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
@@ -147,7 +156,7 @@ public class TransportJobPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnPrevious)
                     .addComponent(btnTransProceed))
                 .addGap(18, 18, 18)
@@ -170,8 +179,6 @@ public class TransportJobPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnPrevious;
     private javax.swing.JButton btnTransProceed;
     private javax.swing.JButton btnTransRefresh;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;

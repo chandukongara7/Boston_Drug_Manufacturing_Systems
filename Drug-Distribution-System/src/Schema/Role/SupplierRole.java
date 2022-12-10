@@ -4,13 +4,13 @@
  */
 package Schema.Role;
 
-import Schema.EcoSystem;
 import Schema.Enterprise.Enterprise;
 import Schema.Network.Network;
 import Schema.Organization.Organization;
+import Schema.Schema.EcoSystem;
 import Schema.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.Supplier.SupplierWorkAreaJPanel;
+import UI.Supplier.SupplierJobPanel;
 
 /**
  *
@@ -19,7 +19,7 @@ import ui.Supplier.SupplierWorkAreaJPanel;
 public class SupplierRole extends Role {
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
-        return new SupplierWorkAreaJPanel(userProcessContainer,business,account,organization);
+        return new SupplierJobPanel(userProcessContainer,business,account,organization);
     }
     
     @Override
