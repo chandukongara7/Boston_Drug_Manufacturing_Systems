@@ -4,7 +4,7 @@
  */
 package UI.SystemAdmin;
 
-import Schema.EcoSystem;
+import Schema.Schema.EcoSystem;
 import Schema.Enterprise.Address;
 import Schema.Enterprise.AddressListDetails;
 import Schema.Enterprise.Enterprise;

@@ -4,22 +4,21 @@
  */
 package Schema.Role;
 
-import Schema.EcoSystem;
+import Schema.Schema.EcoSystem;
 import Schema.Enterprise.Enterprise;
 import Schema.Network.Network;
 import Schema.Organization.Organization;
 import Schema.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.AdministrativeRole.AdminWorkAreaJPanel;
+import UI.AdminRole.AdminLandingPanel;
 
 /**
  *
  * @author chandukongara
  */
-public class AdminRole extends Role {
-    @Override
+public abstract class AdminRole extends Role {
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
-        return new AdminWorkAreaJPanel(userProcessContainer, enterprise);
+        return new AdminLandingPanel(userProcessContainer, enterprise);
     }
     
     @Override
