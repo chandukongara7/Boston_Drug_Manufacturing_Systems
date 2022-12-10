@@ -11,18 +11,18 @@ import java.util.Date;
  * @author chandukongara
  */
 public class PharmacyWorkRequest extends WorkRequest {
-    private String requestDate;
+    private Date requestDate;
     private String status ;
     private String medicationName;
     private int Quantity;
     private String network;
     private String supplierName;
 
-    public String getRequestDate() {
+    public Date getRequestDate() {
         return requestDate;
     }
 
-    public void setRequestDate(String requestDate) {
+    public void setRequestDate(Date requestDate) {
         this.requestDate = requestDate;
     }
 

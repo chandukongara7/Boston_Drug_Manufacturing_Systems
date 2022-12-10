@@ -4,6 +4,12 @@
  */
 package UI.PharmacyRole;
 
+import Schema.Enterprise.Enterprise;
+import Schema.Network.Network;
+import Schema.Organization.PharmacyOrganization;
+import Schema.UserAccount.UserAccount;
+import javax.swing.JPanel;
+
 /**
  *
  * @author chandukongara
@@ -15,6 +21,10 @@ public class PharmaLandingPanel extends javax.swing.JPanel {
      */
     public PharmaLandingPanel() {
         initComponents();
+    }
+
+    public PharmaLandingPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, PharmacyOrganization pharmacyOrganization, Network network) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**

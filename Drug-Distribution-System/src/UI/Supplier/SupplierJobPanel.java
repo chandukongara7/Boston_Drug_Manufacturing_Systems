@@ -4,6 +4,11 @@
  */
 package UI.Supplier;
 
+import Schema.Organization.Organization;
+import Schema.Schema.EcoSystem;
+import Schema.UserAccount.UserAccount;
+import javax.swing.JPanel;
+
 /**
  *
  * @author junaid patel
@@ -15,6 +20,10 @@ public class SupplierJobPanel extends javax.swing.JPanel {
      */
     public SupplierJobPanel() {
         initComponents();
+    }
+
+    public SupplierJobPanel(JPanel userProcessContainer, EcoSystem business, UserAccount account, Organization organization) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**

@@ -4,10 +4,14 @@
  */
 package Schema.Organization;
 
-import Schema.Doctor;
+import Schema.Doctor.DoctorPrescription;
+import Schema.Enterprise.Enterprise;
+import Schema.Network.Network;
 import Schema.Role.DoctorRole;
 import Schema.Role.Role;
+import Schema.UserAccount.UserAccount;
 import java.util.ArrayList;
+import javax.swing.JPanel;
 /**
  *
  * @author chandukongara
@@ -23,7 +27,12 @@ public class DoctorOrganization extends Organization {
         @Override 
         public ArrayList<Role> getSupportedRole(){
             ArrayList<Role> roles = new ArrayList<>();
-            roles.add(new DoctorRole());
+            roles.add(new DoctorRole() {
+                
+                public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, Object business, Network network) {
+                    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+                }
+            });
             return roles;
         }
         
