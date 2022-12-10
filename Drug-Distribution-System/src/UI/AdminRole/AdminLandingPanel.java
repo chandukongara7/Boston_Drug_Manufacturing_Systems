@@ -4,6 +4,9 @@
  */
 package UI.AdminRole;
 
+import Schema.Enterprise.Enterprise;
+import javax.swing.JPanel;
+
 /**
  *
  * @author chandukongara
@@ -15,6 +18,10 @@ public class AdminLandingPanel extends javax.swing.JPanel {
      */
     public AdminLandingPanel() {
         initComponents();
+    }
+
+    public AdminLandingPanel(JPanel userProcessContainer, Enterprise enterprise) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**

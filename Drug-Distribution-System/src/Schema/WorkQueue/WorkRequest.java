@@ -16,7 +16,7 @@ public class WorkRequest {
     private UserAccount sender;
     private UserAccount receiver;
     private String status;
-    private String requestDate;
+    private Date requestDate;
     private Date resolveDate;
 
     public String getMessage() {
@@ -51,11 +51,11 @@ public class WorkRequest {
         this.status = status;
     }
 
-    public String getRequestDate() {
+    public Date getRequestDate() {
         return requestDate;
     }
 
-    public void setRequestDate(String requestDate) {
+    public void setRequestDate(Date requestDate) {
         this.requestDate = requestDate;
     }
 
