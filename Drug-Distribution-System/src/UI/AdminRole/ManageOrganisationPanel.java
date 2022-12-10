@@ -34,9 +34,14 @@ public class ManageOrganisationPanel extends javax.swing.JPanel {
         btnCreateOrganisation = new javax.swing.JButton();
         btnPrevious = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         lblOrganisationTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         lblOrganisationTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblOrganisationTitle.setText("Organisation Management");
+
+        spOrganisation.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         tblOrganisation.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -80,7 +85,7 @@ public class ManageOrganisationPanel extends javax.swing.JPanel {
                                 .addComponent(lblOrganisationType, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(cmbOrganisationType, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,7 +102,7 @@ public class ManageOrganisationPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCreateOrganisation)
                     .addComponent(btnPrevious))
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

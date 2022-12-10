@@ -40,6 +40,10 @@ public class AdminLandingPanel extends javax.swing.JPanel {
         btnManageEmployee = new javax.swing.JButton();
         btnManageUser = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lblAdminTitle.setBackground(new java.awt.Color(0, 0, 0));
         lblAdminTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         lblAdminTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAdminTitle.setText("Administrator");
@@ -79,7 +83,7 @@ public class AdminLandingPanel extends javax.swing.JPanel {
                     .addComponent(btnManageOrganisation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnManageEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnManageUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(523, Short.MAX_VALUE))
+                .addContainerGap(521, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,7 +100,7 @@ public class AdminLandingPanel extends javax.swing.JPanel {
                 .addComponent(btnManageEmployee)
                 .addGap(41, 41, 41)
                 .addComponent(btnManageUser)
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addContainerGap(328, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
