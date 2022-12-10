@@ -4,6 +4,13 @@
  */
 package UI.HospitalAdminRole;
 
+import Schema.Organization.Organization;
+import Schema.Organization.Organization.OrganizationType;
+import Schema.Organization.OrganizationDirectory;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author chandukongara
@@ -13,6 +20,10 @@ public class ManageOrganisationPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageOrganisationPanel
      */
+    
+    private OrganizationDirectory orgDir;
+    private JPanel userProcessContainer;
+    
     public ManageOrganisationPanel() {
         initComponents();
     }
@@ -142,8 +153,6 @@ public class ManageOrganisationPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnCreateOrganisation;
     private javax.swing.JButton btnPrevious;
     private javax.swing.JComboBox<String> cmbOrganisationType;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel lblOrganisationTitle;

@@ -56,18 +56,7 @@ public class MainJFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         workPanel.setForeground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout workPanelLayout = new javax.swing.GroupLayout(workPanel);
-        workPanel.setLayout(workPanelLayout);
-        workPanelLayout.setHorizontalGroup(
-            workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 781, Short.MAX_VALUE)
-        );
-        workPanelLayout.setVerticalGroup(
-            workPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-        );
-
+        workPanel.setLayout(new java.awt.CardLayout());
         jSplitPane2.setRightComponent(workPanel);
 
         controlPanel.setBackground(new java.awt.Color(0, 18, 50));
@@ -147,21 +136,12 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addComponent(btnLogin)
                 .addGap(32, 32, 32)
                 .addComponent(btnLogout)
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jSplitPane2.setLeftComponent(controlPanel);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane2)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane2)
-        );
+        getContentPane().add(jSplitPane2, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

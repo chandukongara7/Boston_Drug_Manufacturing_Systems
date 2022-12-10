@@ -4,6 +4,13 @@
  */
 package UI.AdminRole;
 
+import Schema.Employee.Employee;
+import Schema.Organization.Organization;
+import Schema.Organization.OrganizationDirectory;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author chandukongara
@@ -13,8 +20,41 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageEmployeePanel
      */
-    public ManageEmployeePanel() {
-        initComponents();
+    
+    private OrganizationDirectory orgDir;
+    private JPanel upContainer;
+    
+    public ManageEmployeePanel(JPanel upContainer,OrganizationDirectory orgDir) {
+         initComponents();
+         populateOrganizationComboBox();
+         populateOrganizationEmpComboBox();    
+    }
+    
+    public void populateOrganizationComboBox() {
+        cmbOrganisationFilter.removeAllItems();
+        
+        for (Organization organization : orgDir.getOrganizationList()){
+            cmbOrganisationFilter.addItem(organization);
+        }
+    }
+    
+    public void populateOrganizationEmpComboBox() {
+        cmbOrganisation.removeAllItems();
+        
+        for (Organization organization : orgDir.getOrganizationList()){
+            cmbOrganisation.addItem(organization);
+        }
+    }
+    
+    private void populateTable(Organization organization){
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();    
+        model.setRowCount(0);
+        for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()){
+            Object[] row = new Object[2];
+            row[0] = employee.getEmployeeId();
+            row[1] = employee.getEmployeeName();
+            model.addRow(row);
+        }
     }
 
     /**
@@ -69,6 +109,11 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
         lblOrganistionTitle.setText("Organisation:");
 
         cmbOrganisation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbOrganisation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbOrganisationActionPerformed(evt);
+            }
+        });
 
         lblName.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         lblName.setForeground(new java.awt.Color(255, 255, 255));
@@ -88,6 +133,11 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
         });
 
         btnCreateEmployee.setText("Create Employee");
+        btnCreateEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateEmployeeActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -190,7 +240,26 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
 
     private void btnPreviousActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreviousActionPerformed
         // TODO add your handling code here:
+        upContainer.remove(this);
+        CardLayout layout = (CardLayout) upContainer.getLayout();
+        layout.previous(upContainer); 
     }//GEN-LAST:event_btnPreviousActionPerformed
+
+    private void btnCreateEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateEmployeeActionPerformed
+        // TODO add your handling code here:
+        Organization org = (Organization) cmbOrganisation.getSelectedItem();
+        String name = txtName.getText();
+        
+        org.getEmployeeDirectory().createEmployee(name);
+    }//GEN-LAST:event_btnCreateEmployeeActionPerformed
+
+    private void cmbOrganisationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrganisationActionPerformed
+        // TODO add your handling code here:
+        Organization organization = (Organization) cmbOrganisationFilter.getSelectedItem();
+        if (organization != null){
+            populateTable(organization);
+        }  
+    }//GEN-LAST:event_cmbOrganisationActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

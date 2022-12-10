@@ -29,21 +29,24 @@
           <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
-                      <Component id="btnPrevious" min="-2" pref="192" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnCreateOrganisation" min="-2" pref="194" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
                       <Component id="spOrganisation" min="-2" pref="530" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
-                      <Component id="lblOrganisationType" min="-2" pref="178" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="cmbOrganisationType" min="-2" pref="239" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="btnPrevious" min="-2" pref="209" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnCreateOrganisation" min="-2" pref="208" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="lblOrganisationType" min="-2" pref="178" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="cmbOrganisationType" min="-2" pref="239" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace pref="135" max="32767" attributes="0"/>
@@ -142,11 +145,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Create Organisation"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateOrganisationActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnPrevious">
       <Properties>
         <Property name="text" type="java.lang.String" value="Previous"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPreviousActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel3">
       <Properties>
