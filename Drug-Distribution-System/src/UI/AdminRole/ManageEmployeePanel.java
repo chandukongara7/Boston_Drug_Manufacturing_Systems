@@ -41,8 +41,6 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
         lblEmployeeTitle = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(32, 47, 90));
-
-        setBackground(new java.awt.Color(204, 204, 255));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblOrganisationFilter.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
@@ -178,7 +176,10 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnPrevious)
-                            .addComponent(btnCreateEmployee))))
+                            .addComponent(btnCreateEmployee)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(spTable, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(245, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
