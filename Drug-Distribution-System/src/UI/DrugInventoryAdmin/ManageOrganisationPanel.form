@@ -25,22 +25,18 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="spOrganisation" min="-2" pref="530" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
-                              <Component id="btnPrevious" min="-2" pref="192" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                              <Component id="btnCreateOrganisation" min="-2" pref="194" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="lblOrganisationType" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                                      <Component id="cmbOrganisationType" min="-2" pref="239" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="spOrganisation" min="-2" pref="530" max="-2" attributes="0"/>
+                                  <Component id="lblOrganisationType" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnPrevious" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btnCreateOrganisation" min="-2" pref="194" max="-2" attributes="0"/>
+                                  <Component id="cmbOrganisationType" min="-2" pref="239" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -62,9 +58,9 @@
                   <Component id="lblOrganisationType" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cmbOrganisationType" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="43" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnPrevious" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnPrevious" alignment="3" pref="48" max="32767" attributes="0"/>
                   <Component id="btnCreateOrganisation" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
@@ -75,6 +71,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnPrevious">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Icons/arrow-left.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Previous"/>
       </Properties>
     </Component>
