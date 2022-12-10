@@ -4,25 +4,23 @@
  */
 package Schema.Organization;
 
-import Schema.Role.MedicalEquipmentRole;
 import Schema.Role.Role;
+import Schema.Role.SupplierRole;
 import java.util.ArrayList;
 
 /**
  *
  * @author chandukongara
  */
-public class DrugHandlingOrganization extends Organization {
-    public DrugHandlingOrganization(){
-        super(Organization.OrganizationType.MedicalEquipment.getValue());
-    }
-        
-        @Override 
+public class SupplierOrganization extends Organization {
+    public SupplierOrganization(){
+        super(Organization.OrganizationType.Supplier.getValue());
+    }   
+    
+    @Override
     public ArrayList<Role> getSupportedRole(){
         ArrayList<Role> roles = new ArrayList<>();
-        roles.add(new MedicalEquipmentRole());
+        roles.add(new SupplierRole());
         return roles;
     }
-        
-        
 }
