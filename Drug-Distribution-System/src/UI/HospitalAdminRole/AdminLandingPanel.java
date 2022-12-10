@@ -29,9 +29,13 @@ public class AdminLandingPanel extends javax.swing.JPanel {
         btnManageOrganisation = new javax.swing.JButton();
         lblEnterpriseValue = new javax.swing.JLabel();
         lblEnterpriseTitle = new javax.swing.JLabel();
-        lblAdminTitle = new javax.swing.JLabel();
         btnManageUser = new javax.swing.JButton();
         btnManageEmployee = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        lblAdminTitle = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(32, 47, 90));
 
         btnManageOrganisation.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         btnManageOrganisation.setText("Manage Organisation");
@@ -42,14 +46,12 @@ public class AdminLandingPanel extends javax.swing.JPanel {
         });
 
         lblEnterpriseValue.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblEnterpriseValue.setForeground(new java.awt.Color(255, 255, 255));
         lblEnterpriseValue.setText("<Value>");
 
         lblEnterpriseTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
+        lblEnterpriseTitle.setForeground(new java.awt.Color(255, 255, 255));
         lblEnterpriseTitle.setText("Enterprise:");
-
-        lblAdminTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        lblAdminTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAdminTitle.setText("Hospital Administrator");
 
         btnManageUser.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         btnManageUser.setText("Manage User");
@@ -57,11 +59,48 @@ public class AdminLandingPanel extends javax.swing.JPanel {
         btnManageEmployee.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         btnManageEmployee.setText("Manage Employee");
 
+        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 39, Short.MAX_VALUE)
+        );
+
+        lblAdminTitle.setFont(new java.awt.Font("Helvetica", 0, 24)); // NOI18N
+        lblAdminTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAdminTitle.setText("Hospital Administrator");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(lblAdminTitle)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(lblAdminTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblAdminTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -72,14 +111,13 @@ public class AdminLandingPanel extends javax.swing.JPanel {
                     .addComponent(btnManageOrganisation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnManageEmployee, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnManageUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(523, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(lblAdminTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEnterpriseTitle)
                     .addComponent(lblEnterpriseValue))
@@ -89,7 +127,7 @@ public class AdminLandingPanel extends javax.swing.JPanel {
                 .addComponent(btnManageEmployee)
                 .addGap(41, 41, 41)
                 .addComponent(btnManageUser)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(330, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -102,6 +140,8 @@ public class AdminLandingPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageEmployee;
     private javax.swing.JButton btnManageOrganisation;
     private javax.swing.JButton btnManageUser;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblAdminTitle;
     private javax.swing.JLabel lblEnterpriseTitle;
     private javax.swing.JLabel lblEnterpriseValue;
