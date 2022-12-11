@@ -66,6 +66,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Manage User"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageUserActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnManageEmployee">
       <Properties>
@@ -74,6 +77,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Manage Employee"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManageEmployeeActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnManageOrganisation">
       <Properties>

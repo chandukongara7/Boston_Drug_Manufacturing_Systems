@@ -46,7 +46,7 @@
                           <Component id="cmbEmployee" max="32767" attributes="0"/>
                           <Component id="cmbRole" max="32767" attributes="0"/>
                           <Component id="txtUsername" max="32767" attributes="0"/>
-                          <Component id="fielddPassword" min="-2" pref="206" max="-2" attributes="0"/>
+                          <Component id="fieldPassword" min="-2" pref="206" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="btnCreate" max="32767" attributes="0"/>
@@ -89,7 +89,7 @@
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblPassword" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fielddPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fieldPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Component id="btnCreate" min="-2" max="-2" attributes="0"/>
@@ -209,6 +209,9 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmbOrganisationActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -245,20 +248,26 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtUsername">
     </Component>
-    <Component class="javax.swing.JPasswordField" name="fielddPassword">
+    <Component class="javax.swing.JPasswordField" name="fieldPassword">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fielddPasswordActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldPasswordActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCreate">
       <Properties>
         <Property name="text" type="java.lang.String" value="Create User "/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Previous"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel3">
       <Properties>

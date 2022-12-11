@@ -4,6 +4,11 @@
  */
 package UI.DrugInventoryAdmin;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import Schema.Enterprise.Enterprise;
+import ui.HospitalAdminRole.*;
+
 /**
  *
  * @author chandukongara
@@ -13,8 +18,14 @@ public class AdminLandingPanel extends javax.swing.JPanel {
     /**
      * Creates new form AdminWorkPanel
      */
-    public AdminLandingPanel() {
+    JPanel userProcessContainer;
+    Enterprise enterprise;
+    
+    public AdminLandingPanel(JPanel userProcessContainer, Enterprise enterprise) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.enterprise = enterprise;
+        lblEnterpriseValue.setText(enterprise.getName());    
     }
 
     /**
@@ -39,9 +50,19 @@ public class AdminLandingPanel extends javax.swing.JPanel {
 
         btnManageUser.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         btnManageUser.setText("Manage User");
+        btnManageUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageUserActionPerformed(evt);
+            }
+        });
 
         btnManageEmployee.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         btnManageEmployee.setText("Manage Employee");
+        btnManageEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageEmployeeActionPerformed(evt);
+            }
+        });
 
         btnManageOrganisation.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         btnManageOrganisation.setText("Manage Organisation");
@@ -131,7 +152,27 @@ public class AdminLandingPanel extends javax.swing.JPanel {
 
     private void btnManageOrganisationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganisationActionPerformed
         // TODO add your handling code here:
+       ManageOrganisationPanel manageOrgJPanel = new ManageOrganisationPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+       userProcessContainer.add("manageOrgJPanel", manageOrgJPanel);
+       CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+       layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageOrganisationActionPerformed
+
+    private void btnManageEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEmployeeActionPerformed
+        // TODO add your handling code here:
+        ManageEmployeePanel manageemployeeJPanel = new ManageEmployeePanel(userProcessContainer, enterprise.getOrganizationDirectory());
+         userProcessContainer.add("manageemployeeJPanel",manageemployeeJPanel );
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnManageEmployeeActionPerformed
+
+    private void btnManageUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageUserActionPerformed
+        // TODO add your handling code here:
+        ManageUserAccountPanel muajp = new ManageUserAccountPanel(userProcessContainer, enterprise);
+        userProcessContainer.add("ManageUserAccountJPanel",muajp );
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnManageUserActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
