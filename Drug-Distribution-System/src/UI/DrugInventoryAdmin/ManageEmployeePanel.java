@@ -4,6 +4,14 @@
  */
 package UI.DrugInventoryAdmin;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import ui.HospitalAdminRole.*;
+import Schema.Employee.Employee;
+import Schema.Organization.OrganizationDirectory;
+import Schema.Organization.Organization;
+
 /**
  *
  * @author chandukongara
@@ -13,9 +21,49 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageEmployeePanel
      */
-    public ManageEmployeePanel() {
+    
+    private OrganizationDirectory organizationDir;
+    private JPanel userProcessContainer;
+    
+    public ManageEmployeePanel(JPanel userProcessContainer,OrganizationDirectory organizationDir) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.organizationDir = organizationDir;
+        
+        populateOrganizationComboBox();
+        populateOrganizationEmpComboBox();    
     }
+    
+    public void populateOrganizationComboBox(){
+        cmbOrganisationFilter.removeAllItems();
+        
+        for (Organization organization : organizationDir.getOrganizationList()){
+            cmbOrganisationFilter.addItem(organization);
+        }
+    }
+    
+    public void populateOrganizationEmpComboBox(){
+        cmbOrganisation.removeAllItems();
+        
+        for (Organization organization : organizationDir.getOrganizationList()){
+            cmbOrganisation.addItem(organization);
+        }
+    }
+    
+    private void populateTable(Organization organization){
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        
+        model.setRowCount(0);
+        
+        for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()){
+            Object[] row = new Object[2];
+            row[0] = employee.getEmployeeId();
+            row[1] = employee.getEmployeeName();
+            model.addRow(row);
+        }
+        
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -53,6 +101,11 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
         lblOrganisationFilter.setText("Organisation Filter:");
 
         btnCreateEmployee.setText("Create Employee");
+        btnCreateEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateEmployeeActionPerformed(evt);
+            }
+        });
 
         btnPrevious.setText("Previous");
         btnPrevious.addActionListener(new java.awt.event.ActionListener() {
@@ -72,6 +125,11 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
         lblName.setText("Name:");
 
         cmbOrganisation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbOrganisation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbOrganisationActionPerformed(evt);
+            }
+        });
 
         lblOrganistionTitle.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         lblOrganistionTitle.setForeground(new java.awt.Color(255, 255, 255));
@@ -202,11 +260,30 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
 
     private void btnPreviousActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreviousActionPerformed
         // TODO add your handling code here:
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);   
     }//GEN-LAST:event_btnPreviousActionPerformed
 
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
+
+    private void btnCreateEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateEmployeeActionPerformed
+        // TODO add your handling code here:
+        Organization organization = (Organization) cmbOrganisation.getSelectedItem();
+        String name = txtName.getText();
+        organization.getEmployeeDirectory().createEmployee(name);   
+        populateTable(organization);
+    }//GEN-LAST:event_btnCreateEmployeeActionPerformed
+
+    private void cmbOrganisationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrganisationActionPerformed
+        // TODO add your handling code here:
+        Organization organization = (Organization) cmbOrganisationFilter.getSelectedItem();
+        if (organization != null){
+            populateTable(organization);
+        }
+    }//GEN-LAST:event_cmbOrganisationActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

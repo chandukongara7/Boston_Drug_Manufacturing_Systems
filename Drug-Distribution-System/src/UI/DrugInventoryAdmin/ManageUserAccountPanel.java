@@ -4,6 +4,16 @@
  */
 package UI.DrugInventoryAdmin;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import ui.HospitalAdminRole.*;
+import Schema.Employee.Employee;
+import Schema.Enterprise.Enterprise;
+import Schema.Organization.Organization;
+import Schema.Role.Role;
+import Schema.UserAccount.UserAccount;
+
 /**
  *
  * @author chandukongara
@@ -13,8 +23,51 @@ public class ManageUserAccountPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageUserAccountPanel
      */
-    public ManageUserAccountPanel() {
+    private JPanel container;
+    private Enterprise enterprise;
+    
+    public ManageUserAccountPanel(JPanel container, Enterprise enterprise) {
         initComponents();
+        this.enterprise = enterprise;
+        this.container = container;
+        
+        popOrganizationComboBox();
+        popData();   
+    }
+    
+    public void popOrganizationComboBox(){
+        cmbOrganisation.removeAllItems();
+        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()){
+            cmbOrganisation.addItem(organization);
+        }
+    }
+    public void  populateEmployeeComboBox(Organization organization){
+        cmbEmployee.removeAllItems();
+        for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()){
+            cmbEmployee.addItem(employee);
+        }
+    }
+    private void populateRoleComboBox(Organization org){
+        cmbRole.removeAllItems();
+        for (Role role : org.getSupportedRole()){
+            cmbRole.addItem(role);
+        
+        }
+    }
+    
+    public void popData(){
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0);
+        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()){
+            for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()){
+                Object row[] = new Object[2];
+                row[0] = ua;
+                row[1] = ua.getRole();
+                ((DefaultTableModel)jTable1.getModel()).addRow(row);
+                
+            }
+        }
+        
     }
 
     /**
@@ -81,8 +134,18 @@ public class ManageUserAccountPanel extends javax.swing.JPanel {
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/arrow-left.png"))); // NOI18N
         jButton2.setText("Previous");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         btnCreate.setText("Create User ");
+        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateActionPerformed(evt);
+            }
+        });
 
         fielddPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +158,11 @@ public class ManageUserAccountPanel extends javax.swing.JPanel {
         cmbEmployee.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         cmbOrganisation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbOrganisation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbOrganisationActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -219,6 +287,33 @@ public class ManageUserAccountPanel extends javax.swing.JPanel {
     private void fielddPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fielddPasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fielddPasswordActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        container.remove(this);
+        CardLayout layout = (CardLayout) container.getLayout();
+        layout.previous(container);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+        // TODO add your handling code here:
+        String userName = txtUsername.getText();
+        String password = fielddPassword.getText();
+        Organization organization = (Organization) cmbOrganisation.getSelectedItem();
+        Employee employee = (Employee) cmbEmployee.getSelectedItem();
+        Role role = (Role) cmbRole.getSelectedItem();
+        organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
+        popData();
+    }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void cmbOrganisationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbOrganisationActionPerformed
+        // TODO add your handling code here:
+        Organization organization = (Organization) cmbOrganisation.getSelectedItem();
+        if (organization != null){
+            populateEmployeeComboBox(organization);
+            populateRoleComboBox(organization);
+        }
+    }//GEN-LAST:event_cmbOrganisationActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
