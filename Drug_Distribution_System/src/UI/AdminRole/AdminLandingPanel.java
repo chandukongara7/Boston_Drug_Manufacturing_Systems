@@ -35,54 +35,92 @@ public class AdminLandingPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        headerLbl = new javax.swing.JLabel();
         enterpriseLbl = new javax.swing.JLabel();
         valueLbl = new javax.swing.JLabel();
         manageOrgBtn = new javax.swing.JButton();
         manageEmpBtn = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        headerLbl = new javax.swing.JLabel();
         manageUserBtn = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(32, 47, 90));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        headerLbl.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        headerLbl.setForeground(new java.awt.Color(0, 102, 102));
-        headerLbl.setText("My Work Area - Administrative Role");
-        add(headerLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, -1, -1));
-
         enterpriseLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        enterpriseLbl.setForeground(new java.awt.Color(255, 255, 255));
         enterpriseLbl.setText("Enterprise:");
-        add(enterpriseLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, -1, -1));
+        add(enterpriseLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
 
         valueLbl.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        valueLbl.setForeground(new java.awt.Color(255, 255, 255));
         valueLbl.setText("<value>");
-        add(valueLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, -1, -1));
+        add(valueLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, -1, -1));
 
-        manageOrgBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        manageOrgBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         manageOrgBtn.setText("Manage Organization");
         manageOrgBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageOrgBtnActionPerformed(evt);
             }
         });
-        add(manageOrgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 260, -1));
+        add(manageOrgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 210, -1));
 
-        manageEmpBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        manageEmpBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         manageEmpBtn.setText("Manage Employee");
         manageEmpBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageEmpBtnActionPerformed(evt);
             }
         });
-        add(manageEmpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 260, -1));
+        add(manageEmpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 210, -1));
 
-        manageUserBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 39, Short.MAX_VALUE)
+        );
+
+        headerLbl.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        headerLbl.setText("My Work Area - Administrative Role");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(headerLbl)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(headerLbl)
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+
+        manageUserBtn.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         manageUserBtn.setText("Manage User");
         manageUserBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageUserBtnActionPerformed(evt);
             }
         });
-        add(manageUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 260, -1));
+        add(manageUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, 210, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageUserBtnActionPerformed
@@ -110,6 +148,8 @@ lyt.next(upContainer);        // TODO add your handling code here:
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel enterpriseLbl;
     private javax.swing.JLabel headerLbl;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton manageEmpBtn;
     private javax.swing.JButton manageOrgBtn;
     private javax.swing.JButton manageUserBtn;
