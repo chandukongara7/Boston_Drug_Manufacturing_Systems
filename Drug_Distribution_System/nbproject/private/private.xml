@@ -2,26 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/AdministrativeRole/ManageUserAccountPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/HospitalAdminRole/ManageOrganisationPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/HospitalAdminRole/ManageUserAccountPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/DrugInventoryWareHouse/ViewTransportationRequestJPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/DrugInventoryAdmin/ManageUserAccountPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/DoctorRole/ClinicMedOrderPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/AdministrativeRole/ManageEmployeePanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/Schema/Organization/DoctorOrganization.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/DrugInventoryWareHouse/DrugInventoryWorkArea.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/DoctorRole/DoctorPrescPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/DoctorRole/DoctorLandingPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/AdministrativeRole/ManageOrganisationPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/Schema/Organization/AdminOrg.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/HospitalAdminRole/ManageEmployeePanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/DrugInventoryAdmin/ManageEmployeePanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/AdministrativeRole/AdminLandingPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/DrugInventoryAdmin/AdminLandingPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/DrugInventoryAdmin/ManageOrganisationPanel.java</file>
-            <file>file:/Users/chandukongara/Desktop/Boston_Drug_Manufacturing_Systems%20copy/Drug_Distribution_System/src/UI/HospitalAdminRole/AdminLandingPanel.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

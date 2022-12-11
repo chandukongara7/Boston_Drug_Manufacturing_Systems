@@ -11,7 +11,7 @@ import Schema.Network.Network;
 import Schema.Organization.Organization;
 import Schema.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import UI.AdministrativeRole.AdminLandingPanel;
+import UI.AdminRole.AdminLandingPanel;
 
 /**
  *
