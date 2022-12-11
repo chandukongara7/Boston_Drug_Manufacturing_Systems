@@ -4,6 +4,14 @@
  */
 package UI.DrugInventoryAdmin;
 
+import javax.swing.JPanel;
+import Schema.Organization.OrganizationDirectory;
+import java.awt.CardLayout;
+import javax.swing.table.DefaultTableModel;
+import Schema.Organization.Organization;
+import Schema.Organization.Organization.OrganizationType;
+import ui.HospitalAdminRole.*;
+
 /**
  *
  * @author chandukongara
@@ -13,9 +21,30 @@ public class ManageOrganisationPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageOrganisationPanel
      */
-    public ManageOrganisationPanel() {
+    private OrganizationDirectory orgDirectory;
+    private JPanel userprocessContainer;
+    
+    public ManageOrganisationPanel(JPanel userprocessContainer, OrganizationDirectory orgDirectory) {
         initComponents();
+        this.userprocessContainer=userprocessContainer;
+        this.orgDirectory = orgDirectory;
+        
+        populateTable();
+        populateCombo();    
     }
+
+        private void populateTable(){
+        DefaultTableModel model = (DefaultTableModel) tblOrganisation.getModel();
+        model.setRowCount(0);
+        for (Organization organization : orgDirectory.getOrganizationList()){
+            Object[] row = new Object[2];
+            row[0] = organization.getOrganizationID();
+            row[1] = organization.getName();
+            model.addRow(row);
+
+        }
+
+        }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,8 +69,18 @@ public class ManageOrganisationPanel extends javax.swing.JPanel {
 
         btnPrevious.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/arrow-left.png"))); // NOI18N
         btnPrevious.setText("Previous");
+        btnPrevious.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPreviousActionPerformed(evt);
+            }
+        });
 
         btnCreateOrganisation.setText("Create Organisation");
+        btnCreateOrganisation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateOrganisationActionPerformed(evt);
+            }
+        });
 
         cmbOrganisationType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -139,6 +178,27 @@ public class ManageOrganisationPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnCreateOrganisationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateOrganisationActionPerformed
+        // TODO add your handling code here:
+        OrganizationType orgType = (OrganizationType) cmbOrganisationType.getSelectedItem();
+        orgDirectory.createOrganization(orgType);
+        populateTable();
+    }//GEN-LAST:event_btnCreateOrganisationActionPerformed
+
+    private void btnPreviousActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreviousActionPerformed
+        // TODO add your handling code here:
+        userprocessContainer.remove(this);
+        CardLayout crd = (CardLayout) userprocessContainer.getLayout();
+        crd.previous(userprocessContainer);
+    }//GEN-LAST:event_btnPreviousActionPerformed
+
+    private void populateCombo() {
+        cmbOrganisationType.removeAllItems();
+        for (OrganizationType orgType : Organization.OrganizationType.values()){
+            if(!orgType.getValue().equals(OrganizationType.Admin.getValue()))
+               cmbOrganisationType.addItem(orgType);
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCreateOrganisation;
