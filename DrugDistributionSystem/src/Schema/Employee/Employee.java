@@ -21,12 +21,19 @@ public class Employee {
     public int getEmployeeId(){
         return EmployeeId;
     }
+
+    public void setEmployeeId(int EmployeeId) {
+        this.EmployeeId = EmployeeId;
+    }
+    
+    public String getEmployeeName(){
+        return EmployeeName;
+    }
+    
     public void setName (String EmployeeName){
         this.EmployeeName=EmployeeName;
         }
-    public String getEmployeeName(){
-        return EmployeeName;
-        }
+    
     @Override
     public String toString(){
         return EmployeeName;
