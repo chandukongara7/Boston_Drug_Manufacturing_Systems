@@ -36,12 +36,12 @@ public class DB4OUtil {
 
             EmbeddedConfiguration config = Db4oEmbedded.newConfiguration();
             config.common().add(new TransparentPersistenceSupport());
-            //Controls the number of objects in memory
+            //Controls the no objects in memory
             config.common().activationDepth(Integer.MAX_VALUE);
-            //Controls the depth/level of updation of Object
+            //Controls the level of updation of Object
             config.common().updateDepth(Integer.MAX_VALUE);
 
-            //Register your top most Class here
+            //Register top Class 
             config.common().objectClass(EcoSystem.class).cascadeOnUpdate(true); // Change to the object you want to save
 
             ObjectContainer db = Db4oEmbedded.openFile(config, FILENAME);
@@ -60,18 +60,6 @@ public class DB4OUtil {
         conn.close();
     }
 
-    public void deleteOldSystem(ObjectContainer conn) {
-        ObjectSet<EcoSystem> systems = conn.query(new Predicate<EcoSystem>() {
-            @Override
-            public boolean match(EcoSystem et) {
-                return true;
-            }
-        });
-        for (EcoSystem ecoSystem : systems) {
-            conn.delete(ecoSystem);
-        }
-    }
-
     public EcoSystem retrieveSystem() {
         ObjectContainer conn = createConnection();
         ObjectSet<EcoSystem> systems = conn.query(EcoSystem.class); // Change to the object you want to save
@@ -86,4 +74,17 @@ public class DB4OUtil {
         conn.close();
         return system;
     }
+    
+    public void deleteOldSystem(ObjectContainer conn) {
+        ObjectSet<EcoSystem> systems = conn.query(new Predicate<EcoSystem>() {
+            @Override
+            public boolean match(EcoSystem et) {
+                return true;
+            }
+        });
+        for (EcoSystem ecoSystem : systems) {
+            conn.delete(ecoSystem);
+        }
+    }
+    
 }

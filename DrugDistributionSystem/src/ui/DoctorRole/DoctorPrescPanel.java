@@ -316,7 +316,7 @@ public void populateWorkReqTable() {
     private void saveBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveBtnActionPerformed
         DoctorPrescription p = new DoctorPrescription();
 
-        p.setDaignosis(jTextField1.getText());
+        p.setDiagnosis(jTextField1.getText());
 
         p.setNameOfMedicine(medicationCmbBox.getSelectedItem().toString());
 
@@ -333,7 +333,7 @@ public void populateWorkReqTable() {
             flag = false;
         }
 
-        if (p.getDaignosis().equals("")) {
+        if (p.getDiagnosis().equals("")) {
             JOptionPane.showMessageDialog(null, " Diagnosis cannot be empty!");
             flag = false;
         } else if (nameTxt.getText().equals("")) {

@@ -13,28 +13,24 @@ package Schema.Doctor;
 public class Doctor {
     private String Name;
     private PrescriptionList prescriptionlist;
-
+    
+    public Doctor(){
+        prescriptionlist = new PrescriptionList();
+    }
+    
     public String getName() {
         return Name;
     }
 
-    
     public void setName(String Name) {
         this.Name = Name;
     }
 
-    
     public PrescriptionList getPrescriptionlist() {
         return prescriptionlist;
     }
-
     
     public void setPrescriptionlist(PrescriptionList prescriptionlist) {
         this.prescriptionlist = prescriptionlist;
-    }
-    
-    
-    public Doctor(){
-        prescriptionlist = new PrescriptionList();
     }
 }

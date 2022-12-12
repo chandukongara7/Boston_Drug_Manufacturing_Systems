@@ -7,7 +7,6 @@ package Schema.Employee;
 
 import java.util.ArrayList;
 
-
 /**
  *
  * @author chandukongara
@@ -17,10 +16,14 @@ public class EmployeeDirectory {
    
     public EmployeeDirectory (){
         employeeList = new ArrayList<>();
-        }
+    }
     
     public ArrayList<Employee> getEmployeeList(){
         return employeeList;
+    }
+
+    public void setEmployeeList(ArrayList<Employee> employeeList) {
+        this.employeeList = employeeList;
     }
     
     public Employee createEmployee(String EmployeeName) {
