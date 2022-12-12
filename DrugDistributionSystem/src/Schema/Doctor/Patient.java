@@ -7,7 +7,7 @@ package Schema.Doctor;
 
 /**
  *
- * @author krishna
+ * @author junaidpatel
  */
 public class Patient {
     private int patientID;

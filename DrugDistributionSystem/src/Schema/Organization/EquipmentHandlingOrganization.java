@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author krishna
+ * @author junaidpatel
  */
 public class EquipmentHandlingOrganization extends Organization {
     public EquipmentHandlingOrganization(){
