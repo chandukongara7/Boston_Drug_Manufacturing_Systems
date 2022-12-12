@@ -203,17 +203,19 @@ private EcoSystem system;
     }//GEN-LAST:event_userNameJTextFieldActionPerformed
 
     private void logoutJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutJButtonActionPerformed
-    logoutJButton.setEnabled(false);
-    userNameJTextField.setEnabled(true); userNameJTextField.setText("");
-    PasswordField.setEnabled(true); PasswordField.setText("");
-    db4o.storeSystem(system);
-    loginJButton.setEnabled(true);
-    jPanel2.removeAll();
-    JPanel blankPanel = new JPanel();
-    jPanel2.add("blank",blankPanel );
-    CardLayout layoutCard = (CardLayout) jPanel2.getLayout();
-    layoutCard.next(jPanel2);
-    db4o.storeSystem(system);
+logoutJButton.setEnabled(false);
+userNameJTextField.setEnabled(true); userNameJTextField.setText("");
+PasswordField.setEnabled(true); PasswordField.setText("");
+db4o.storeSystem(system);
+loginJButton.setEnabled(true);
+jPanel2.removeAll();
+JPanel blankPanel = new JPanel();
+jPanel2.add("blank",blankPanel );
+CardLayout layoutCard = (CardLayout) jPanel2.getLayout();
+layoutCard.next(jPanel2);
+db4o.storeSystem(system);
+
+// TODO add your handling code here:
     }//GEN-LAST:event_logoutJButtonActionPerformed
 
    
@@ -223,9 +225,12 @@ char[] passwordCharArray = PasswordField.getPassword();
 String password = String.valueOf(passwordCharArray);
 
 if ((userNameJTextField.getText().isEmpty()) || (PasswordField.getText().isEmpty())){
-    JOptionPane.showMessageDialog(this, "Please Enter Username" , "Warning", JOptionPane.ERROR_MESSAGE);
-}
+            JOptionPane.showMessageDialog(this, "Please Enter Username" , "Warning", JOptionPane.ERROR_MESSAGE);
+        }
 else{
+
+
+
 UserAccount ua = system.getUserAccountDirectory().authenticateUser(userName, password);
 Enterprise inEnt = null;
 Organization inOrg = null;
@@ -267,15 +272,15 @@ if (ua==null){
     return;
 }
 else {
-    CardLayout layout = (CardLayout) jPanel2.getLayout();
-    jPanel2.add(ua.getRole().toString()+"workArea", ua.getRole().createWorkArea(jPanel2, ua, inOrg, inEnt, system,inNet));
-    layout.next(jPanel2);
+CardLayout layout = (CardLayout) jPanel2.getLayout();
+jPanel2.add(ua.getRole().toString()+"workArea", ua.getRole().createWorkArea(jPanel2, ua, inOrg, inEnt, system,inNet));
+layout.next(jPanel2);
 }
 loginJButton.setEnabled(false);
 userNameJTextField.setEnabled(false);
 PasswordField.setEnabled(false);
 logoutJButton.setEnabled(true);
-}
+    }
 //System.out.println(system.getUserAccountDirectory();
     }//GEN-LAST:event_loginJButtonActionPerformed
 
@@ -308,6 +313,9 @@ java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.log
 } catch (javax.swing.UnsupportedLookAndFeelException ex) {
 java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 }
+//</editor-fold>
+
+
 
 /* Create and display the form */
 java.awt.EventQueue.invokeLater(new Runnable() {
@@ -315,6 +323,7 @@ public void run() {
 new MainJFrame().setVisible(true);
 }
 });
+        // TODO add your handling code here:
     }//GEN-LAST:event_PasswordFieldActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

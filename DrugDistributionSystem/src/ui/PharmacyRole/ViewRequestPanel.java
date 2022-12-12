@@ -43,21 +43,21 @@ public void populateTable(){
 DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
 model.setRowCount(0);
 model.setRowCount(0);
-    for (WorkRequest request : userAccount.getWorkQueue().getWorkRequestList()){
-        Object[] row = new Object[5];
-        row[0] = ((SupplierWorkRequest) request).getMedicationName();
-        row[1] = ((SupplierWorkRequest) request).getQuantity();
-        row[2] = request.getReceiver().getUsername();
-        String result = ((SupplierWorkRequest) request).getStatus();
-        row[3] = result == null ? "Waiting" : result;
-        if(((SupplierWorkRequest) request).getDeliveryTime()==null){
-            row[4]="Details yet to be updated by supplier";
+        for (WorkRequest request : userAccount.getWorkQueue().getWorkRequestList()){
+            Object[] row = new Object[5];
+            row[0] = ((SupplierWorkRequest) request).getMedicationName();
+            row[1] = ((SupplierWorkRequest) request).getQuantity();
+            row[2] = request.getReceiver().getUsername();
+            String result = ((SupplierWorkRequest) request).getStatus();
+            row[3] = result == null ? "Waiting" : result;
+            if(((SupplierWorkRequest) request).getDeliveryTime()==null){
+                row[4]="Details yet to be updated by supplier";
+            }
+            else{
+            row[4]  = "Expected delivery time " +((SupplierWorkRequest) request).getDeliveryTime();
+                    }
+            model.addRow(row);
         }
-        else{
-        row[4]  = "Expected delivery time " +((SupplierWorkRequest) request).getDeliveryTime();
-        }
-        model.addRow(row);
-    }
 }
     
 
@@ -174,7 +174,7 @@ model.setRowCount(0);
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
-        userProcessContainer.remove(this);
+userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
         PharmaLandingPanel pwjp = (PharmaLandingPanel) component;

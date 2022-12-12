@@ -15,9 +15,9 @@ import java.util.Date;
 public class DoctorWorkRequest {
     private UserAccount sender;
     private UserAccount receiver;
+    private String medicationName;
     private String patientName;
     private String hospitalName;
-    private String medicationName;
     private String status;
     private Date requestDate;
     private int Quantity;
@@ -38,6 +38,14 @@ public class DoctorWorkRequest {
         this.receiver = receiver;
     }
 
+    public String getMedicationName() {
+        return medicationName;
+    }
+
+    public void setMedicationName(String medicationName) {
+        this.medicationName = medicationName;
+    }
+
     public String getPatientName() {
         return patientName;
     }
@@ -46,14 +54,6 @@ public class DoctorWorkRequest {
         this.patientName = patientName;
     }
 
-    public String getMedicationName() {
-        return medicationName;
-    }
-
-    public void setMedicationName(String medicationName) {
-        this.medicationName = medicationName;
-    }
-    
     public String getHospitalName() {
         return hospitalName;
     }

@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Schema.Enterprise;
-
 import Schema.Role.Role;
 import Schema.WorkQueue.WorkQueue;
 import Schema.WorkQueue.WorkRequest;
@@ -17,11 +16,11 @@ import java.util.ArrayList;
  */
 public class PharmacyEnterprise extends Enterprise {
     private WorkQueue equipmentworkqueue;
-    
     public PharmacyEnterprise(String name){
         super(name, Enterprise.EnterpriseType.Pharmacy);
         equipmentworkqueue=new WorkQueue();
     }
+    
     
     @Override
     public ArrayList<Role> getSupportedRole(){

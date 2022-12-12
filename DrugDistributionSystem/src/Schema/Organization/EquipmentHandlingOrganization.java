@@ -13,11 +13,11 @@ import java.util.ArrayList;
  *
  * @author junaidpatel
  */
-
 public class EquipmentHandlingOrganization extends Organization {
     public EquipmentHandlingOrganization(){
         super(Organization.OrganizationType.MedicalEquipment.getValue());
-    }
+          }
+    
     
     @Override 
     public ArrayList<Role> getSupportedRole(){
