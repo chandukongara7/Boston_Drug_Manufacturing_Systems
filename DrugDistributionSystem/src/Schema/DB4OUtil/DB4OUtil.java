@@ -11,7 +11,7 @@ import com.db4o.ta.TransparentPersistenceSupport;
 
 /**
  *
- * @author rrheg
+ * @author lakshyagupta
  */
 public class DB4OUtil {
 

@@ -8,7 +8,7 @@ package Schema.Doctor;
 
 /**
  *
- * @author krishna
+ * @author junaidpatel
  */
 public class Doctor {
     private String Name;

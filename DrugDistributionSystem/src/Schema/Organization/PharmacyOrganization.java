@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author krishna
+ * @author junaidpatel
  */
 public class PharmacyOrganization extends Organization{
 private ArrayList<PharmaInventory> medList;

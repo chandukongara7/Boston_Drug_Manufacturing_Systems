@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author krishna
+ * @author junaidpatel
  */
 public class PharmaInventory {
 private int serialNumber;    
