@@ -14,122 +14,123 @@ import java.util.Date;
 public class PharmaInventory {
 private int serialNumber;    
 private int productId;    
-private String medicineName;
-private String Category;
-private int reorderLevel;
 private int minimumStock;
 private int maximumStock;
 private Date expiryDate;
+private String medicineName;
 private int availableQuantity;
 private double purchasePrice;
 private double sellingPrice;
+private String Category;
+private int reorderLevel;
 private int requiredQuantity;
 private String reorderStatus="N";
 
-    public int getSerialNumber() {
-        return serialNumber;
-    }
+public int getSerialNumber() {
+    return serialNumber;
+}
 
-    public void setSerialNumber(int serialNumber) {
-        this.serialNumber = serialNumber;
-    }
+public void setSerialNumber(int serialNumber) {
+    this.serialNumber = serialNumber;
+}
 
-    public int getProductId() {
-        return productId;
-    }
+public int getProductId() {
+    return productId;
+}
 
-    public void setProductId(int productId) {
-        this.productId = productId;
-    }
+public void setProductId(int productId) {
+    this.productId = productId;
+}
 
-    public String getMedicineName() {
-        return medicineName;
-    }
+public String getMedicineName() {
+    return medicineName;
+}
 
-    public void setMedicineName(String medicineName) {
-        this.medicineName = medicineName;
-    }
+public void setMedicineName(String medicineName) {
+    this.medicineName = medicineName;
+}
 
-    public String getCategory() {
-        return Category;
-    }
+public String getCategory() {
+    return Category;
+}
 
-    public void setCategory(String Category) {
-        this.Category = Category;
-    }
+public void setCategory(String Category) {
+    this.Category = Category;
+}
 
-    public int getReorderLevel() {
-        return reorderLevel;
-    }
+public int getReorderLevel() {
+    return reorderLevel;
+}
 
-    public void setReorderLevel(int reorderLevel) {
-        this.reorderLevel = reorderLevel;
-    }
+public void setReorderLevel(int reorderLevel) {
+    this.reorderLevel = reorderLevel;
+}
 
-    public int getMinimumStock() {
-        return minimumStock;
-    }
+public int getMinimumStock() {
+    return minimumStock;
+}
 
-    public void setMinimumStock(int minimumStock) {
-        this.minimumStock = minimumStock;
-    }
+public void setMinimumStock(int minimumStock) {
+    this.minimumStock = minimumStock;
+}
 
-    public int getMaximumStock() {
-        return maximumStock;
-    }
+public Date getExpiryDate() {
+    return expiryDate;
+}
 
-    public void setMaximumStock(int maximumStock) {
-        this.maximumStock = maximumStock;
-    }
+public void setExpiryDate(Date expiryDate) {
+    this.expiryDate = expiryDate;
+}
 
-    public Date getExpiryDate() {
-        return expiryDate;
-    }
+public int getMaximumStock() {
+    return maximumStock;
+}
 
-    public void setExpiryDate(Date expiryDate) {
-        this.expiryDate = expiryDate;
-    }
+public void setMaximumStock(int maximumStock) {
+    this.maximumStock = maximumStock;
+}
 
-    public int getAvailableQuantity() {
-        return availableQuantity;
-    }
+public int getAvailableQuantity() {
+    return availableQuantity;
+}
 
-    public void setAvailableQuantity(int availableQuantity) {
-        this.availableQuantity = availableQuantity;
-    }
+public void setAvailableQuantity(int availableQuantity) {
+    this.availableQuantity = availableQuantity;
+}
 
-    public double getPurchasePrice() {
-        return purchasePrice;
-    }
+public int getRequiredQuantity() {
+    return requiredQuantity;
+}
 
-    public void setPurchasePrice(double purchasePrice) {
-        this.purchasePrice = purchasePrice;
-    }
+public void setRequiredQuantity(int requiredQuantity) {
+    this.requiredQuantity = requiredQuantity;
+}
 
-    public double getSellingPrice() {
-        return sellingPrice;
-    }
+public double getPurchasePrice() {
+    return purchasePrice;
+}
 
-    public void setSellingPrice(double sellingPrice) {
-        this.sellingPrice = sellingPrice;
-    }
+public void setPurchasePrice(double purchasePrice) {
+    this.purchasePrice = purchasePrice;
+}
 
-    public int getRequiredQuantity() {
-        return requiredQuantity;
-    }
+public double getSellingPrice() {
+    return sellingPrice;
+}   
 
-    public void setRequiredQuantity(int requiredQuantity) {
-        this.requiredQuantity = requiredQuantity;
-    }
+public void setSellingPrice(double sellingPrice) {
+    this.sellingPrice = sellingPrice;
+}
 
-    public String getReorderStatus() {
-        return reorderStatus;
-    }
+public String getReorderStatus() {
+    return reorderStatus;
+}
 
-    public void setReorderStatus(String reorderStatus) {
-        this.reorderStatus = reorderStatus;
-    }
-    @Override
+public void setReorderStatus(String reorderStatus) {
+    this.reorderStatus = reorderStatus;
+}
+    
+@Override
     public String toString(){
         return this.medicineName;
     }

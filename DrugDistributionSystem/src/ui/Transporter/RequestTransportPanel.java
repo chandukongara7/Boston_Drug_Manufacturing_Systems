@@ -18,23 +18,18 @@ import Schema.WorkQueue.TransportationWorkRequest;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import ui.DrugInventoryWarehouse.TransportRequestViewPanel;
-
-
-
-
+import static java.lang.ProcessBuilder.Redirect.to;
 
 /*
  *
  * @author lakshyagupta
  */
 
-import static java.lang.ProcessBuilder.Redirect.to;
 public class RequestTransportPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form RequestTransportPanel
      */
-    
     JPanel userProcessContainer;
     TransportationWorkRequest request;
     private UserAccount userAccount;
@@ -190,18 +185,15 @@ public class RequestTransportPanel extends javax.swing.JPanel {
 public void sendMailToCommunityMember(String to[], String subject, String message, String from, String password)
 {
     String [] host = {"smtp@gmail.com"};
-            Properties props = System.getProperties();
-            props.put("mail.smtp.user", from);
-            props.put("mail.smtp.port", 587);
-            props.put("mail.smtp.host", host);
-            props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.starttls.enable", "true");
-JOptionPane.showMessageDialog(this, "New notification from Transport Department");
-                    
-                    
-                  
-            
+    Properties props = System.getProperties();
+    props.put("mail.smtp.user", from);
+    props.put("mail.smtp.port", 587);
+    props.put("mail.smtp.host", host);
+    props.put("mail.smtp.auth", "true");
+    props.put("mail.smtp.starttls.enable", "true");
+    JOptionPane.showMessageDialog(this, "New notification from Transport Department");        
 }
+
     private void txtVehicleNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVehicleNumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtVehicleNumActionPerformed
@@ -210,9 +202,7 @@ JOptionPane.showMessageDialog(this, "New notification from Transport Department"
         if(txtVehicleNum.getText().isEmpty()){
             JOptionPane.showMessageDialog(this, "Please Enter Vehicle Num" , "Warning", JOptionPane.ERROR_MESSAGE);
         }
-        else{
-            
-        
+        else{            
         request.setTime(timeCmbBox.getSelectedItem().toString() +" "+ timezoneCmbBox.getSelectedItem().toString()+" "+"VehicleNumber" +txtVehicleNum.getText());
         String[] to = {"ckongarac@gmail.com"};
         sendMailToCommunityMember(to,

@@ -7,9 +7,9 @@ package ui.Transporter;
 import Schema.EcoSystem;
 import Schema.Organization.Organization;
 import Schema.UserAccount.UserAccount;
-import Schema.Organization.TransportOrganization;
 import Schema.WorkQueue.WorkRequest;
 import Schema.WorkQueue.TransportationWorkRequest;
+import Schema.Organization.TransportOrganization;
 import Schema.WorkQueue.HealthcareEquipmentWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -28,6 +28,7 @@ public class TransportJobPanel extends javax.swing.JPanel {
     private UserAccount account;
     private Organization organization;
     private EcoSystem system;
+    
     public TransportJobPanel(JPanel userProcessContainer, UserAccount account, Organization organization, EcoSystem system){
         initComponents();
         this.userProcessContainer=userProcessContainer;
@@ -35,8 +36,8 @@ public class TransportJobPanel extends javax.swing.JPanel {
         this.organization=(TransportOrganization)organization;
         this.system=system;
         populateTable();
-        
     }
+    
     public void populateTable(){
         DefaultTableModel model = (DefaultTableModel)workreqTble.getModel();
         model.setRowCount(0);
@@ -199,11 +200,11 @@ public class TransportJobPanel extends javax.swing.JPanel {
         int selectedRow = workreqTble.getSelectedRow();
         if (selectedRow < 0){JOptionPane.showMessageDialog(null, "Please select a row!");
     }//GEN-LAST:event_processreqBtnActionPerformed
-TransportationWorkRequest request = (TransportationWorkRequest)workreqTble.getValueAt(selectedRow, 0);
-request.setStatus("Processing");
-CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-userProcessContainer.add("ProcessRequest", new ui.Transporter.RequestTransportPanel(userProcessContainer,request));
-layout.next(userProcessContainer);
+    TransportationWorkRequest request = (TransportationWorkRequest)workreqTble.getValueAt(selectedRow, 0);
+    request.setStatus("Processing");
+    CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+    userProcessContainer.add("ProcessRequest", new ui.Transporter.RequestTransportPanel(userProcessContainer,request));
+    layout.next(userProcessContainer);
     }
     
     private void assignBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignBtnActionPerformed
