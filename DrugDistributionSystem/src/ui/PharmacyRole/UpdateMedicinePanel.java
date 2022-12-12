@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class UpdateMedicinePanel extends javax.swing.JPanel {
         JPanel userProcessContainer;

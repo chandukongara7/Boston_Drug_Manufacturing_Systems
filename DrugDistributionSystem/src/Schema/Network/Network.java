@@ -9,7 +9,7 @@ import Schema.Enterprise.EnterpriseDirectory;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class Network {
 private String name;

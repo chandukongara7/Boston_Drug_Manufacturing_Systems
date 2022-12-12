@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class DoctorLandingPanel extends javax.swing.JPanel {
 private JPanel userprocessContainer;

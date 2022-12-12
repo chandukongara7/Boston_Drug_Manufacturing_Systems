@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class ManageEmployeePanel extends javax.swing.JPanel {
     private OrganizationDirectory orgDir;

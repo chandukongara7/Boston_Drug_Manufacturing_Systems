@@ -16,7 +16,7 @@ import Schema.Organization.Organization;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class ManageEmployeePanel extends javax.swing.JPanel {
     private OrganizationDirectory organizationDir;

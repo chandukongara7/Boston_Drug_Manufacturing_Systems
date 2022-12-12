@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class SupplierEnterprise extends Enterprise{
     public SupplierEnterprise(String name){

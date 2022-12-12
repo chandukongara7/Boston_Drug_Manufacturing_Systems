@@ -25,7 +25,7 @@ import ui.DrugInventoryWarehouse.TransportRequestViewPanel;
 
 /*
  *
- * @author 16176
+ * @author lakshyagupta
  */
 
 import static java.lang.ProcessBuilder.Redirect.to;
@@ -61,7 +61,7 @@ public class RequestTransportPanel extends javax.swing.JPanel {
         timeCmbBox = new javax.swing.JComboBox<>();
         timezoneCmbBox = new javax.swing.JComboBox<>();
         vehiclenumLbl = new javax.swing.JLabel();
-        vehiclenumTxt = new javax.swing.JTextField();
+        txtVehicleNum = new javax.swing.JTextField();
         backBtn = new javax.swing.JButton();
         notifythroughmailBtn = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -87,13 +87,13 @@ public class RequestTransportPanel extends javax.swing.JPanel {
         vehiclenumLbl.setForeground(new java.awt.Color(255, 255, 255));
         vehiclenumLbl.setText("Vehicle Number:");
 
-        vehiclenumTxt.addActionListener(new java.awt.event.ActionListener() {
+        txtVehicleNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                vehiclenumTxtActionPerformed(evt);
+                txtVehicleNumActionPerformed(evt);
             }
         });
 
-        backBtn.setText("<< Back");
+        backBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/arrowback.png"))); // NOI18N
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtnActionPerformed(evt);
@@ -113,15 +113,15 @@ public class RequestTransportPanel extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 1225, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 40, Short.MAX_VALUE)
         );
 
-        trpaLbl.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
-        trpaLbl.setText("TRANSPORT REQUEST PROCESS AREA");
+        trpaLbl.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        trpaLbl.setText("Transport Request Area");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -129,16 +129,17 @@ public class RequestTransportPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
                 .addComponent(trpaLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 947, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 278, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(trpaLbl)
-                .addGap(30, 30, 30))
+                .addGap(29, 29, 29))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -157,7 +158,7 @@ public class RequestTransportPanel extends javax.swing.JPanel {
                         .addComponent(timeCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(41, 41, 41)
                         .addComponent(timezoneCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(vehiclenumTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVehicleNum, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(notifythroughmailBtn))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -168,14 +169,14 @@ public class RequestTransportPanel extends javax.swing.JPanel {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(104, 104, 104)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(vehiclenumTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtVehicleNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(vehiclenumLbl))
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(etdLbl)
                     .addComponent(timeCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(timezoneCmbBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backBtn)
                     .addComponent(notifythroughmailBtn))
@@ -191,30 +192,36 @@ public void sendMailToCommunityMember(String to[], String subject, String messag
     String [] host = {"smtp@gmail.com"};
             Properties props = System.getProperties();
             props.put("mail.smtp.user", from);
-            props.put("mail.smtp.port", 674);
+            props.put("mail.smtp.port", 587);
             props.put("mail.smtp.host", host);
             props.put("mail.smtp.auth", "true");
-            props.put("mail.smtp.startttls.enable", "true");
+            props.put("mail.smtp.starttls.enable", "true");
 JOptionPane.showMessageDialog(this, "New notification from Transport Department");
                     
                     
                   
             
 }
-    private void vehiclenumTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vehiclenumTxtActionPerformed
+    private void txtVehicleNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVehicleNumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_vehiclenumTxtActionPerformed
+    }//GEN-LAST:event_txtVehicleNumActionPerformed
 
     private void notifythroughmailBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_notifythroughmailBtnActionPerformed
-        request.setTime(timeCmbBox.getSelectedItem().toString() +" "+ timezoneCmbBox.getSelectedItem().toString()+" "+"VehicleNumber" +vehiclenumTxt.getText());
-        String[] to = {"yashwanth.3b8@gmail.com"};
+        if(txtVehicleNum.getText().isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please Enter Vehicle Num" , "Warning", JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            
+        
+        request.setTime(timeCmbBox.getSelectedItem().toString() +" "+ timezoneCmbBox.getSelectedItem().toString()+" "+"VehicleNumber" +txtVehicleNum.getText());
+        String[] to = {"ckongarac@gmail.com"};
         sendMailToCommunityMember(to,
                 "Alert from Transportation department",
                 "The delivery details are for the equipment "+request.getEquipmentinfo()+" are" +request.getTime(),
-                "doctortesting.test@gmail.com",
-                "doctororganization");
+                "infotestmail71@gmail.com",
+                "edjklevvwfgdfxoa");
         JOptionPane.showMessageDialog(null,"Email sent successfully");
-        
+        }
     }//GEN-LAST:event_notifythroughmailBtnActionPerformed
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -238,7 +245,7 @@ JOptionPane.showMessageDialog(this, "New notification from Transport Department"
     private javax.swing.JComboBox<String> timeCmbBox;
     private javax.swing.JComboBox<String> timezoneCmbBox;
     private javax.swing.JLabel trpaLbl;
+    private javax.swing.JTextField txtVehicleNum;
     private javax.swing.JLabel vehiclenumLbl;
-    private javax.swing.JTextField vehiclenumTxt;
     // End of variables declaration//GEN-END:variables
 }

@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class PharmaLandingPanel extends javax.swing.JPanel {
     JPanel upContainer;

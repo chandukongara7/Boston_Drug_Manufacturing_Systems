@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class TransportOrganization extends Organization {
 public TransportOrganization(){

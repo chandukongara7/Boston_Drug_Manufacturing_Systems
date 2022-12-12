@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class AddressList {
     private ArrayList<Address> addressList;

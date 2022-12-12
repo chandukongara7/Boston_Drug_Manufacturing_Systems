@@ -16,7 +16,7 @@ import Schema.UserAccount.UserAccount;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class ManageUserAccountPanel extends javax.swing.JPanel {
 

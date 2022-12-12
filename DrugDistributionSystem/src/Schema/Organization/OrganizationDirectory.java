@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class OrganizationDirectory {
     private ArrayList<Organization> organizationList;

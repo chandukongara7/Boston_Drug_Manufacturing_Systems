@@ -15,7 +15,7 @@ import ui.Supplier.SupplierJobSheetPanel;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class SupplierRole extends Role {
 

@@ -16,7 +16,7 @@ import ui.DoctorRole.DoctorLandingPanel;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class DoctorRole extends Role {
 

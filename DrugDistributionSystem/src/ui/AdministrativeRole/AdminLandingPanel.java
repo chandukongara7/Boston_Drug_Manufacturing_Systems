@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class AdminLandingPanel extends javax.swing.JPanel {
     JPanel upContainer;
@@ -49,13 +49,13 @@ public class AdminLandingPanel extends javax.swing.JPanel {
 
         enterpriseLbl.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         enterpriseLbl.setForeground(new java.awt.Color(255, 255, 255));
-        enterpriseLbl.setText("Enterprise:");
-        add(enterpriseLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, -1, -1));
+        enterpriseLbl.setText("Enterprise Admin:");
+        add(enterpriseLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, -1));
 
         valueLbl.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         valueLbl.setForeground(new java.awt.Color(255, 255, 255));
         valueLbl.setText("<value>");
-        add(valueLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, -1, -1));
+        add(valueLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, -1, -1));
 
         manageOrgBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         manageOrgBtn.setText("Manage Organization");
@@ -64,7 +64,7 @@ public class AdminLandingPanel extends javax.swing.JPanel {
                 manageOrgBtnActionPerformed(evt);
             }
         });
-        add(manageOrgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 260, -1));
+        add(manageOrgBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 250, 260, -1));
 
         manageEmpBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         manageEmpBtn.setText("Manage Employee");
@@ -73,7 +73,7 @@ public class AdminLandingPanel extends javax.swing.JPanel {
                 manageEmpBtnActionPerformed(evt);
             }
         });
-        add(manageEmpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 370, 260, -1));
+        add(manageEmpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 260, -1));
 
         manageUserBtn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         manageUserBtn.setText("Manage User");
@@ -82,7 +82,7 @@ public class AdminLandingPanel extends javax.swing.JPanel {
                 manageUserBtnActionPerformed(evt);
             }
         });
-        add(manageUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 260, -1));
+        add(manageUserBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, 260, -1));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -99,7 +99,7 @@ public class AdminLandingPanel extends javax.swing.JPanel {
 
         headerLbl.setBackground(new java.awt.Color(0, 0, 0));
         headerLbl.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        headerLbl.setText("Admin");
+        headerLbl.setText("Enterprise Admin");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -107,7 +107,7 @@ public class AdminLandingPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
+                .addGap(37, 37, 37)
                 .addComponent(headerLbl)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -115,9 +115,9 @@ public class AdminLandingPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(headerLbl)
-                .addGap(0, 27, Short.MAX_VALUE))
+                .addGap(0, 15, Short.MAX_VALUE))
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));

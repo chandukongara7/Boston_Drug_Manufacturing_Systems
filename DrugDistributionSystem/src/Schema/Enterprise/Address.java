@@ -7,7 +7,7 @@ package Schema.Enterprise;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class Address {
     private String enterpriseName;

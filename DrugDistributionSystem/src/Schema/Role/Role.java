@@ -15,7 +15,7 @@ import Schema.UserAccount.UserAccount;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public abstract class Role {
 public enum RoleType{

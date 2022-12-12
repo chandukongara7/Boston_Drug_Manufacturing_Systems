@@ -10,7 +10,7 @@ import Schema.WorkQueue.WorkQueue;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class UserAccount {
     private String username;

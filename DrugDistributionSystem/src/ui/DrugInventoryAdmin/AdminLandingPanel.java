@@ -13,7 +13,7 @@ import ui.HospitalAdminRole.*;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class AdminLandingPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;

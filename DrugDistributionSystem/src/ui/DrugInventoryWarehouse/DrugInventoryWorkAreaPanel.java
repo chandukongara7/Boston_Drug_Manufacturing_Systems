@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class DrugInventoryWorkAreaPanel extends javax.swing.JPanel {
     private JPanel upContainer;

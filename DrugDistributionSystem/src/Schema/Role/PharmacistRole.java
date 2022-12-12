@@ -16,7 +16,7 @@ import ui.PharmacyRole.PharmaLandingPanel;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class PharmacistRole extends Role {
     @Override

@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class ManageAreaPanel extends javax.swing.JPanel {
     private JPanel userprocessContainer;
@@ -65,6 +65,12 @@ public class ManageAreaPanel extends javax.swing.JPanel {
         nameLbl.setForeground(new java.awt.Color(255, 255, 255));
         nameLbl.setText("Name:");
 
+        nameTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameTxtFieldActionPerformed(evt);
+            }
+        });
+
         backBtn.setText("<< Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +91,7 @@ public class ManageAreaPanel extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 800, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,7 +107,7 @@ public class ManageAreaPanel extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(30, 30, 30)
                 .addComponent(jLabel1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -167,16 +173,26 @@ crdLO.previous(userprocessContainer); // TODO add your handling code here:
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
 String networkName = nameTxtField.getText();
-for (Network n: system.getNetworkList()) {
+if(networkName.isEmpty()){
+    JOptionPane.showMessageDialog(this, "Please Enter All Fields" , "Warning", JOptionPane.ERROR_MESSAGE);
+}
+else{
+    for (Network n: system.getNetworkList()) {
     if (n.getName().equals(networkName)) {
-        JOptionPane.showMessageDialog(this, "Can not insert copies.");
+        JOptionPane.showMessageDialog(this, "Cannot insert copies.");
         return;
     }
+}
+
 }
 Network network = system.createAndAddNetwork();
 network.setName(networkName);
 populateNetworkTable();// TODO add your handling code here:
     }//GEN-LAST:event_submitBtnActionPerformed
+
+    private void nameTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nameTxtFieldActionPerformed
 
     private void populateNetworkTable() {
        DefaultTableModel model = (DefaultTableModel) nameTbl.getModel();

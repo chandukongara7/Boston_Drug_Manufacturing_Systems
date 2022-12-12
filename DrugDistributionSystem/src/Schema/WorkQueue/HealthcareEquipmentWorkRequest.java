@@ -6,7 +6,7 @@ package Schema.WorkQueue;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class HealthcareEquipmentWorkRequest extends WorkRequest {
     private float actualprice;

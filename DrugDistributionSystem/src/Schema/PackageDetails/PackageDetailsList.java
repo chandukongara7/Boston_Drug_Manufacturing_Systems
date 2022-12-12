@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class PackageDetailsList {
     private ArrayList<PackageDetails> detailsList;

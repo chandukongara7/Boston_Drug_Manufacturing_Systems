@@ -15,7 +15,7 @@ import ui.SystemAdmin.SystemAdminWorkAreaPanel;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class SysAdminRole extends Role{
     @Override
