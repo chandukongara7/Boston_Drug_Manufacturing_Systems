@@ -15,11 +15,12 @@ import java.util.Date;
  */
 public class WorkRequest {
     private String message;
-    private UserAccount sender;
-    private UserAccount receiver;
     private String status;
     private String requestDate;
     private Date resolveDate;
+    private UserAccount sender;
+    private UserAccount receiver;
+    
 
     public String getMessage() {
         return message;

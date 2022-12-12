@@ -11,10 +11,10 @@ package Schema.Supplier;
  */
 public class Supplier {
     private String supplierName;
-    private String type;
     private String supplierLocation;
     private Product product;
-
+    private String type;
+    
     public String getSupplierName() {
         return supplierName;
     }
@@ -30,6 +30,14 @@ public class Supplier {
     public void setType(String type) {
         this.type = type;
     }
+    
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
     public String getSupplierLocation() {
         return supplierLocation;
@@ -39,11 +47,4 @@ public class Supplier {
         this.supplierLocation = supplierLocation;
     }
 
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
 }

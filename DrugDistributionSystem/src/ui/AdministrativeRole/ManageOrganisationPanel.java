@@ -23,19 +23,19 @@ public class ManageOrganisationPanel extends javax.swing.JPanel {
      */
     public ManageOrganisationPanel(JPanel upContainer,OrganizationDirectory orgDir) {
         initComponents();
-                this.upContainer = upContainer;
+        this.upContainer = upContainer;
         this.orgDir = orgDir;
         
         populateTable();
         populateCombo(); }
 
-            private void populateCombo(){
-        orgtypeCmbBox.removeAllItems();
-        for (OrganizationType type : Organization.OrganizationType.values()){
-            if (!type.getValue().equals(OrganizationType.Admin.getValue()))
-                orgtypeCmbBox.addItem(type);
+        private void populateCombo(){
+            orgtypeCmbBox.removeAllItems();
+            for (OrganizationType type : Organization.OrganizationType.values()){
+                if (!type.getValue().equals(OrganizationType.Admin.getValue()))
+                    orgtypeCmbBox.addItem(type);
+            }
         }
-    }
             
                 private void populateTable(){
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();

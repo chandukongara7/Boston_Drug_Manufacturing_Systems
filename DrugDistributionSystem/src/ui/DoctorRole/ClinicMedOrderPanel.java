@@ -12,7 +12,7 @@ import Schema.Organization.DoctorOrganization;
 import Schema.Organization.EquipmentHandlingOrganization;
 import Schema.Organization.Organization;
 import Schema.UserAccount.UserAccount;
-import Schema.WorkQueue.HealthcareEquipmentWorkRequest;
+import Schema.WorkQueue.DrugInventoryWorkRequest;
 import Schema.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.text.SimpleDateFormat;
@@ -235,7 +235,7 @@ populateTable();
     }//GEN-LAST:event_equipnameCmbBox1ActionPerformed
 
     private void sendReqBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendReqBtnActionPerformed
-        HealthcareEquipmentWorkRequest request = new HealthcareEquipmentWorkRequest();
+        DrugInventoryWorkRequest request = new DrugInventoryWorkRequest();
         request.setEquipmentName(equipnameCmbBox.getSelectedItem().toString());
         request.setSender(ua);
         request.setStatus("Sent");
@@ -331,20 +331,20 @@ populateTable();
         for (WorkRequest request : docOrg.getWorkQueue().getWorkRequestList()) {
             Object[] row = new Object[9];
 
-            row[0] = ((HealthcareEquipmentWorkRequest) request);
-            String urgencyLevel = ((HealthcareEquipmentWorkRequest) request).getUrgencyLevel();
+            row[0] = ((DrugInventoryWorkRequest) request);
+            String urgencyLevel = ((DrugInventoryWorkRequest) request).getUrgencyLevel();
             row[1] = urgencyLevel;
-            int quantity = ((HealthcareEquipmentWorkRequest) request).getQuantity();
+            int quantity = ((DrugInventoryWorkRequest) request).getQuantity();
             row[2] = quantity;
             row[3] = request.getSender();
-            row[4] = ((HealthcareEquipmentWorkRequest) request).getReceiver();
+            row[4] = ((DrugInventoryWorkRequest) request).getReceiver();
             row[5] = request.getStatus();
             
-            String expectedArrivalTime = ((HealthcareEquipmentWorkRequest) request).getExpectedArrivalTime();
+            String expectedArrivalTime = ((DrugInventoryWorkRequest) request).getExpectedArrivalTime();
             
             row[6] = request.getRequestDate();
-            row[7] = ((HealthcareEquipmentWorkRequest) request).getActualprice();
-            row[8] = ((HealthcareEquipmentWorkRequest) request).getLoanedprice();
+            row[7] = ((DrugInventoryWorkRequest) request).getActualprice();
+            row[8] = ((DrugInventoryWorkRequest) request).getLoanedprice();
 
             model.addRow(row);
         }

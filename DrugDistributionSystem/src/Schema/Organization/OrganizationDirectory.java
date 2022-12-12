@@ -13,9 +13,10 @@ import java.util.ArrayList;
  * @author chandukongara
  */
 public class OrganizationDirectory {
+    
     private ArrayList<Organization> organizationList;
     public OrganizationDirectory () {
-    organizationList = new ArrayList<>();
+        organizationList = new ArrayList<>();
     }
 
     public ArrayList<Organization> getOrganizationList() {
@@ -27,31 +28,30 @@ public class OrganizationDirectory {
     }
     
     public Organization createOrganization(OrganizationType type){
-Organization organization = null;
-if (type.getValue().equals(OrganizationType.Doctor.getValue())){
-organization = new DoctorOrganization();
-organizationList.add(organization);
-}
+        Organization organization = null;
+        if (type.getValue().equals(OrganizationType.Doctor.getValue())){
+        organization = new DoctorOrganization();
+        organizationList.add(organization);
+        }
 
-else if (type.getValue().equals(OrganizationType.Pharmacy.getValue())){
-organization=new PharmacyOrganization();
-organizationList.add(organization);
-}
+        else if (type.getValue().equals(OrganizationType.Pharmacy.getValue())){
+        organization=new PharmacyOrganization();
+        organizationList.add(organization);
+        }
 
-else if (type.getValue().equals(OrganizationType.Supplier.getValue())){
-organization=new SupplierOrganization();
-organizationList.add(organization);
-}
+        else if (type.getValue().equals(OrganizationType.Supplier.getValue())){
+        organization=new SupplierOrganization();
+        organizationList.add(organization);
+        }
 
-else if (type.getValue().equals(OrganizationType.MedicalEquipment.getValue())){
-organization=new EquipmentHandlingOrganization();
-organizationList.add(organization);
-}
-else if (type.getValue().equals(OrganizationType.Transport.getValue())){
-organization=new TransportOrganization();
-organizationList.add(organization);
-}
-return organization;
-}
-
+        else if (type.getValue().equals(OrganizationType.MedicalEquipment.getValue())){
+        organization=new EquipmentHandlingOrganization();
+        organizationList.add(organization);
+        }
+        else if (type.getValue().equals(OrganizationType.Transport.getValue())){
+        organization=new TransportOrganization();
+        organizationList.add(organization);
+    }
+    return organization;
+    }
 }

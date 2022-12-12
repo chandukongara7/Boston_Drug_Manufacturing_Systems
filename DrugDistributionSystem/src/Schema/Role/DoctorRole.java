@@ -25,12 +25,9 @@ public class DoctorRole extends Role {
         return new DoctorLandingPanel(userProcessContainer,account,(DoctorOrganization)organization,enterprise,business,network);
     }
     
-    
-    
-@Override
-public String toString() {
-    return "Doctor Role";
-}
-    
-    
+    @Override
+    public String toString() {
+        return "Doctor Role";
+    }
+ 
 }

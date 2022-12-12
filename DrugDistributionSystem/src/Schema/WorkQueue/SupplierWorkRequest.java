@@ -14,13 +14,6 @@ public class SupplierWorkRequest  extends WorkRequest {
     private int Quantity;
     private String deliveryTime;
 
-    public String getMedicationName() {
-        return medicationName;
-    }
-
-    public void setMedicationName(String medicationName) {
-        this.medicationName = medicationName;
-    }
 
     public int getQuantity() {
         return Quantity;
@@ -28,6 +21,14 @@ public class SupplierWorkRequest  extends WorkRequest {
 
     public void setQuantity(int Quantity) {
         this.Quantity = Quantity;
+    }
+    
+    public String getMedicationName() {
+        return medicationName;
+    }
+
+    public void setMedicationName(String medicationName) {
+        this.medicationName = medicationName;
     }
 
     public String getDeliveryTime() {

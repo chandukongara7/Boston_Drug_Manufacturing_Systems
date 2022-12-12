@@ -13,14 +13,15 @@ import java.util.Date;
  */
 public class Product {
     private int id;
-    private String slNo;
-    private Date expiryDate;
-    private int barCodeNumber;
     private String nameOfMedicine;
     private String desc;
     private static int count=0;
     private String nameOfVaccine;
     private String NameOfHospital;
+    private String slNo;
+    private Date expiryDate;
+    private int barCodeNumber;
+    
 
     public int getId() {
         return id;
@@ -38,6 +39,11 @@ public class Product {
         this.slNo = slNo;
     }
 
+    public Product(){
+        count++;
+        id=count;
+    }
+    
     public Date getExpiryDate() {
         return expiryDate;
     }
@@ -46,11 +52,6 @@ public class Product {
         this.expiryDate = expiryDate;
     }
 
-    
-    public Product(){
-        count++;
-        id=count;
-    }
     
     public int getBarCodeNumber() {
         return barCodeNumber;
@@ -76,6 +77,11 @@ public class Product {
         this.desc = desc;
     }
 
+
+    public String getNameOfVaccine() {
+        return nameOfVaccine;
+    }
+
     public static int getCount() {
         return count;
     }
@@ -83,11 +89,7 @@ public class Product {
     public static void setCount(int count) {
         Product.count = count;
     }
-
-    public String getNameOfVaccine() {
-        return nameOfVaccine;
-    }
-
+    
     public void setNameOfVaccine(String nameOfVaccine) {
         this.nameOfVaccine = nameOfVaccine;
     }
