@@ -18,18 +18,15 @@ import ui.AdministrativeRole.AdminLandingPanel;
  * @author chandukongara
  */
 public class AdminRole extends Role {
-@Override
-public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
-return new AdminLandingPanel(userProcessContainer, enterprise);
-}
+    @Override
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
+        return new AdminLandingPanel(userProcessContainer, enterprise);
+    }
 
-
-
-@Override
-public String toString() {
-    return "Admin Role";
-}
-
+    @Override
+    public String toString() {
+        return "Admin Role";
+    }
 
 }
 

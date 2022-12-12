@@ -10,7 +10,7 @@ import Schema.UserAccount.UserAccount;
  *
  * @author lakshyagupta
  */
-public class TransportationWorkRequest  extends WorkRequest {
+public class TransporterWorkRequest  extends WorkRequest {
     private String senderName;
     private String time;
     private String timezone;
@@ -100,7 +100,7 @@ public class TransportationWorkRequest  extends WorkRequest {
     }
 
     public static void setCount(int count) {
-        TransportationWorkRequest.count = count;
+        TransporterWorkRequest.count = count;
     }
 
     public int getRequestId() {
@@ -113,7 +113,7 @@ public class TransportationWorkRequest  extends WorkRequest {
     
     
     
-    public TransportationWorkRequest(){
+    public TransporterWorkRequest(){
         count++;
         uniqueId=count;
     }

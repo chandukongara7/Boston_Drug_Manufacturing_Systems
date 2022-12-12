@@ -8,9 +8,9 @@ import Schema.EcoSystem;
 import Schema.Organization.Organization;
 import Schema.UserAccount.UserAccount;
 import Schema.WorkQueue.WorkRequest;
-import Schema.WorkQueue.TransportationWorkRequest;
+import Schema.WorkQueue.TransporterWorkRequest;
 import Schema.Organization.TransportOrganization;
-import Schema.WorkQueue.HealthcareEquipmentWorkRequest;
+import Schema.WorkQueue.DrugInventoryWorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -43,11 +43,11 @@ public class TransportJobPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         for(WorkRequest request : organization.getWorkQueue().getWorkRequestList()){
             Object[] row = new Object[7];
-            row[0] = ((TransportationWorkRequest) request);
+            row[0] = ((TransporterWorkRequest) request);
             row[1] = request.getSender().getEmployee().getEmployeeName();
-            row[2] = ((TransportationWorkRequest) request).getEquipmentinfo();
-            row[3] = ((TransportationWorkRequest) request). getHospitalName();
-            row[4] = ((TransportationWorkRequest) request). getUrgency();
+            row[2] = ((TransporterWorkRequest) request).getEquipmentinfo();
+            row[3] = ((TransporterWorkRequest) request). getHospitalName();
+            row[4] = ((TransporterWorkRequest) request). getUrgency();
             row[5] = request.getStatus();
             row[6] = request.getRequestDate();
             model.addRow(row);
@@ -200,7 +200,7 @@ public class TransportJobPanel extends javax.swing.JPanel {
         int selectedRow = workreqTble.getSelectedRow();
         if (selectedRow < 0){JOptionPane.showMessageDialog(null, "Please select a row!");
     }//GEN-LAST:event_processreqBtnActionPerformed
-    TransportationWorkRequest request = (TransportationWorkRequest)workreqTble.getValueAt(selectedRow, 0);
+    TransporterWorkRequest request = (TransporterWorkRequest)workreqTble.getValueAt(selectedRow, 0);
     request.setStatus("Processing");
     CardLayout layout = (CardLayout) userProcessContainer.getLayout();
     userProcessContainer.add("ProcessRequest", new ui.Transporter.RequestTransportPanel(userProcessContainer,request));
@@ -212,7 +212,7 @@ public class TransportJobPanel extends javax.swing.JPanel {
         if (selectedRow < 0){
         return;
         }
-        TransportationWorkRequest request = (TransportationWorkRequest)workreqTble.getValueAt(selectedRow, 0);
+        TransporterWorkRequest request = (TransporterWorkRequest)workreqTble.getValueAt(selectedRow, 0);
         request.setReceiver(account);
         request.setStatus("Assigned");
     }//GEN-LAST:event_assignBtnActionPerformed

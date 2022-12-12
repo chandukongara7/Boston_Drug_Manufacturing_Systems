@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import Schema.EcoSystem;
 import Schema.Organization.Organization;
 import Schema.UserAccount.UserAccount;
-import Schema.WorkQueue.TransportationWorkRequest;  
+import Schema.WorkQueue.TransporterWorkRequest;  
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import ui.DrugInventoryWarehouse.TransportRequestViewPanel;
@@ -31,12 +31,12 @@ public class RequestTransportPanel extends javax.swing.JPanel {
      * Creates new form RequestTransportPanel
      */
     JPanel userProcessContainer;
-    TransportationWorkRequest request;
+    TransporterWorkRequest request;
     private UserAccount userAccount;
     private Organization organization;
     private EcoSystem system;
     
-    public RequestTransportPanel(JPanel userProcessContainer,TransportationWorkRequest request) {
+    public RequestTransportPanel(JPanel userProcessContainer,TransporterWorkRequest request) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
         this.request=request;

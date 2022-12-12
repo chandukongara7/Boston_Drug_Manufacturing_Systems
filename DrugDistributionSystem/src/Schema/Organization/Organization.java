@@ -10,7 +10,7 @@ import Schema.Employee.EmployeeDirectory;
 import Schema.Role.Role;
 import Schema.UserAccount.UserAccountDirectory;
 import Schema.WorkQueue.WorkQueue;
-import Schema.WorkQueue.HealthcareEquipmentWorkRequest;
+import Schema.WorkQueue.DrugInventoryWorkRequest;
 import java.util.ArrayList;
 
 /**
@@ -25,7 +25,7 @@ private EmployeeDirectory employeeDirectory;
 private UserAccountDirectory userAccountDirectory;
 private int organizationID;
 private static int counter;
-private HealthcareEquipmentWorkRequest medreq;
+private DrugInventoryWorkRequest medreq;
 private ArrayList<DoctorPrescription> pList;
 
 public enum OrganizationType{

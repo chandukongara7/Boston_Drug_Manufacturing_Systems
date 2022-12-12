@@ -62,7 +62,5 @@ public class UserAccount {
     public void setWorkQueue(WorkQueue workQueue) {
         this.workQueue = workQueue;
     }
-    
-    
-    
+
 }

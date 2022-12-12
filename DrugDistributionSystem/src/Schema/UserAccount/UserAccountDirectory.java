@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import Schema.Employee.Employee;
 import Schema.Role.Role;
 
-
 /**
  *
  * @author lakshyagupta
@@ -19,18 +18,21 @@ public class UserAccountDirectory {
     public UserAccountDirectory(){
         userAccountList = new ArrayList<>();
     } 
+    
     public ArrayList<UserAccount> getUserAccountList(){
         return userAccountList;
     }
- public UserAccount authenticateUser(String username, String password){
-     for (UserAccount ua : userAccountList) {
-         System.out.println("Name: " + ua.getUsername() + " Password: " + ua.getPassword());
-        if (ua.getUsername().equals(username) && ua.getPassword ().equals(password)){
-             return ua;
+    
+    public UserAccount authenticateUser(String username, String password){
+        for (UserAccount ua : userAccountList) {
+            System.out.println("Name: " + ua.getUsername() + " Password: " + ua.getPassword());
+           if (ua.getUsername().equals(username) && ua.getPassword ().equals(password)){
+                return ua;
+           }
         }
-     }
-     return null;
- }   
+        return null;
+    }   
+    
  public UserAccount createUserAccount(String username, String password, Employee employee, Role role){
      UserAccount userAccount = new UserAccount();
      userAccount.setUsername(username);
@@ -41,6 +43,7 @@ public class UserAccountDirectory {
      return userAccount;
              
  }
+ 
  public boolean checkIFUsernameIsunique(String username){
      for (UserAccount ua : userAccountList){
          if (ua.getUsername().equals(username))
@@ -48,4 +51,5 @@ public class UserAccountDirectory {
      }
      return true;
  }
+ 
 }
