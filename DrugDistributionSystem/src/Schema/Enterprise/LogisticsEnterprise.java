@@ -8,7 +8,7 @@ import Schema.Role.Role;
 import java.util.ArrayList;
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class LogisticsEnterprise extends Enterprise {
     public LogisticsEnterprise(String name){

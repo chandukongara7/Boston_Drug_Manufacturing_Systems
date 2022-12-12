@@ -8,7 +8,7 @@ import Schema.UserAccount.UserAccount;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class TransportationWorkRequest  extends WorkRequest {
     private String senderName;

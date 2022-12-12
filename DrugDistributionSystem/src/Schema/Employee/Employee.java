@@ -7,7 +7,7 @@ package Schema.Employee;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class Employee {
     private String EmployeeName;

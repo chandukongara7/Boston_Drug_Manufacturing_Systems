@@ -15,7 +15,7 @@ import ui.AdministrativeRole.AdminLandingPanel;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class AdminRole extends Role {
 @Override

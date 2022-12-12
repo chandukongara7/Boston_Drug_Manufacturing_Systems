@@ -7,7 +7,7 @@ package Schema.Supplier;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class Supplier {
     private String supplierName;

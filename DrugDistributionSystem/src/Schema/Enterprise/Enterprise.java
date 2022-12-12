@@ -10,7 +10,7 @@ import Schema.Organization.OrganizationDirectory;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public abstract class Enterprise extends Organization {
 private EnterpriseType enterpriseType;

@@ -16,7 +16,7 @@ import ui.DrugInventoryWarehouse.DrugInventoryWorkAreaPanel;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class MedicalEquipmentRole extends Role {
 

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public class MedicalEquipEnterprise extends Enterprise {
     private WorkQueue equipmentworkqueue;

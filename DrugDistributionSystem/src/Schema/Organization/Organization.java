@@ -14,7 +14,7 @@ import Schema.WorkQueue.HealthcareEquipmentWorkRequest;
 import java.util.ArrayList;
 /**
  *
- * @author ganes
+ * @author chandukongara
  */
 public abstract class Organization {
 private String name;

@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class AdminLandingPanel extends javax.swing.JPanel {
     JPanel userprocessContainer;

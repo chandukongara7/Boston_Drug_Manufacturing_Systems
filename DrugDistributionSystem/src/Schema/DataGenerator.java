@@ -13,7 +13,7 @@ import java.util.Random;
 
 /**
  *
- * @author 16176
+ * @author lakshyagupta
  */
 public class DataGenerator {
     private static String[] equipmentName = {"Oxygen Cylinders","Covid Testing Kits","PulseOxymeters","Stethescope", "Thermometer", "Syringe", "Beds", "BP Kits", "Diabetes Machines"};
