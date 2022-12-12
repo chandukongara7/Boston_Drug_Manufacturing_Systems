@@ -20,7 +20,6 @@ public class AdminOrganization extends Organization {
         return organizationName;
     }
 
-    
     public void setOrganizationName(String organizationName) {
         this.organizationName = organizationName;
     }
@@ -29,12 +28,11 @@ public class AdminOrganization extends Organization {
         super(OrganizationType.Admin.getValue());
     }
  
-    
-    
     @Override
     public ArrayList<Role> getSupportedRole(){
         ArrayList<Role> roles = new ArrayList<>();
         roles.add(new AdminRole());
         return roles;
     }
+    
 }

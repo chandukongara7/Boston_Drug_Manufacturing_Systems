@@ -14,9 +14,9 @@ import java.util.ArrayList;
  * @author chandukongara
  */
 public class TransportOrganization extends Organization {
-public TransportOrganization(){
-super(Organization.OrganizationType.Transport.getValue());
     
+public TransportOrganization(){
+    super(Organization.OrganizationType.Transport.getValue());
 }
 @Override
 public ArrayList<Role> getSupportedRole(){
