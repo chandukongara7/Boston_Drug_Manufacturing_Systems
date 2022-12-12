@@ -15,16 +15,12 @@ public class EnterpriseDirectory {
     
     public EnterpriseDirectory(){
         enterpriseList = new ArrayList<>();
+        
     }
-    
     public ArrayList<Enterprise> getEnterpriseList(){
-        return enterpriseList;  
+        return enterpriseList;
+        
     }
-
-    public void setEnterpriseList(ArrayList<Enterprise> enterpriseList) {
-        this.enterpriseList = enterpriseList;
-    }
-    
     public Enterprise createAndAddEnterprise(String name, Enterprise.EnterpriseType type){
         Enterprise enterprise = null;
         if (type == Enterprise.EnterpriseType.Hospital){

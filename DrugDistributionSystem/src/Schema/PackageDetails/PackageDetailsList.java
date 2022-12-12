@@ -11,24 +11,25 @@ import java.util.ArrayList;
  * @author lakshyagupta
  */
 public class PackageDetailsList {
-private ArrayList<PackageDetails> detailsList;
+    private ArrayList<PackageDetails> detailsList;
 
 public PackageDetailsList(){
-    detailsList=new ArrayList<>();
+detailsList=new ArrayList<>();
 }
 
 public ArrayList<PackageDetails> getDetailsList() {
-    return detailsList;
+return detailsList;
 }
 
 public void setDetailsList(ArrayList<PackageDetails> detailsList) {
-    this.detailsList = detailsList;
+this.detailsList = detailsList;
 }
 
 public PackageDetails addDetails(){
-    PackageDetails p=new PackageDetails();
-    detailsList.add(p);
-    return p;
+PackageDetails p=new PackageDetails();
+detailsList.add(p);
+return p;
+
 }
     
 }

@@ -5,7 +5,7 @@
 package ui.DrugInventoryWarehouse;
 
 import Schema.UserAccount.UserAccount;
-import Schema.WorkQueue.TransporterWorkRequest;
+import Schema.WorkQueue.TransportationWorkRequest;
 import Schema.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class TransportRequestViewPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
-    TransporterWorkRequest request;
+    TransportationWorkRequest request;
     private UserAccount ua;
 
     /**
@@ -39,21 +39,21 @@ public void populateTable(){
         for(WorkRequest request : ua.getWorkQueue().getWorkRequestList()){
             row[0]=request.getSender().getUsername();
             row[1]=request.getReceiver().getUsername();
-            row[2]=((TransporterWorkRequest)request).getHospitalName();
-            row[3]=((TransporterWorkRequest)request).getMessage();
-            request.setMessage(((TransporterWorkRequest)request).getTime());
-            if(((TransporterWorkRequest)request).getMessage()==null){
+            row[2]=((TransportationWorkRequest)request).getHospitalName();
+            row[3]=((TransportationWorkRequest)request).getMessage();
+            request.setMessage(((TransportationWorkRequest)request).getTime());
+            if(((TransportationWorkRequest)request).getMessage()==null){
                 row[3]="Awaiting an update";
             }
             else{
              
-            String result="Delivery Time: "+((TransporterWorkRequest)request).getMessage();
+            String result="Delivery Time: "+((TransportationWorkRequest)request).getMessage();
             request.setMessage(result);
 
             row[3]=result;
-            System.out.println("*******"+((TransporterWorkRequest)request).getRequestId());
+            System.out.println("*******"+((TransportationWorkRequest)request).getRequestId());
            
-            row[4]=((TransporterWorkRequest)request).getEquipmentinfo();
+            row[4]=((TransportationWorkRequest)request).getEquipmentinfo();
              
         }
             model.addRow(row);

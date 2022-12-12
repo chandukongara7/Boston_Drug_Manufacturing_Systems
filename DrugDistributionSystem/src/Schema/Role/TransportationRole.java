@@ -18,10 +18,9 @@ import ui.Transporter.TransportJobPanel;
  * @author chandukongara
  */
 public class TransportationRole extends Role {
-
-@Override
+    @Override
 public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
-    return new TransportJobPanel(userProcessContainer,account,organization,business);
+return new TransportJobPanel(userProcessContainer,account,organization,business);
 }
 
 @Override

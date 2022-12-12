@@ -14,15 +14,14 @@ import java.util.ArrayList;
  * @author chandukongara
  */
 public class TransportOrganization extends Organization {
-    
 public TransportOrganization(){
-    super(Organization.OrganizationType.Transport.getValue());
+super(Organization.OrganizationType.Transport.getValue());
+    
 }
-
 @Override
 public ArrayList<Role> getSupportedRole(){
     ArrayList<Role> roles = new ArrayList<>();
     roles.add(new TransportationRole());
     return roles;
-    }
+}
 }

@@ -9,8 +9,8 @@ import Schema.Enterprise.Enterprise;
 import Schema.Network.Network;
 import Schema.Organization.Organization;
 import Schema.UserAccount.UserAccount;
-import Schema.WorkQueue.DrugInventoryWorkRequest;
-import Schema.WorkQueue.TransporterWorkRequest;
+import Schema.WorkQueue.HealthcareEquipmentWorkRequest;
+import Schema.WorkQueue.TransportationWorkRequest;
 import Schema.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
@@ -51,9 +51,9 @@ public class DrugInventoryWorkAreaPanel extends javax.swing.JPanel {
         System.out.println(org.getWorkQueue().getWorkRequestList().size());
         for(WorkRequest request : org.getWorkQueue().getWorkRequestList()){
             Object[] row = new Object[6];
-            row[0]=((DrugInventoryWorkRequest) request);
-            String urgencyLevel = ((DrugInventoryWorkRequest) request).getUrgencyLevel();
-            int quantity = ((DrugInventoryWorkRequest) request).getQuantity();
+            row[0]=((HealthcareEquipmentWorkRequest) request);
+            String urgencyLevel = ((HealthcareEquipmentWorkRequest) request).getUrgencyLevel();
+            int quantity = ((HealthcareEquipmentWorkRequest) request).getQuantity();
             row[1] = urgencyLevel;
             row[2]=quantity;
             row[3]=request.getSender().getUsername();
@@ -70,10 +70,10 @@ public class DrugInventoryWorkAreaPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         Object row[]=new Object[4];
         for(WorkRequest request : ua.getWorkQueue().getWorkRequestList()){
-            row[0]=((TransporterWorkRequest) request);
+            row[0]=((TransportationWorkRequest) request);
             row[1]=request.getReceiver();
             row[2]=request.getStatus();
-            row[3]=((TransporterWorkRequest)request).getTime();
+            row[3]=((TransportationWorkRequest)request).getTime();
         }
         
     }
@@ -238,11 +238,11 @@ public class DrugInventoryWorkAreaPanel extends javax.swing.JPanel {
             return;
         }
         
-       DrugInventoryWorkRequest request = (DrugInventoryWorkRequest)jTable1.getValueAt(selectedRow, 0);
+       HealthcareEquipmentWorkRequest request = (HealthcareEquipmentWorkRequest)jTable1.getValueAt(selectedRow, 0);
        System.out.println("hello");
        request.setStatus("Request sent to transport department for delivery");
-       TransporterWorkRequest transportrequest=new TransporterWorkRequest();
-        transportrequest=new TransporterWorkRequest();
+       TransportationWorkRequest transportrequest=new TransportationWorkRequest();
+        transportrequest=new TransportationWorkRequest();
         transportrequest.setSender(ua);
         
         transportrequest.setHospitalName(request.getHospitalName());
@@ -296,7 +296,7 @@ int selectedRow = jTable1.getSelectedRow();
            JOptionPane.showMessageDialog(null, "Please select a row!");
         }
         
-        DrugInventoryWorkRequest request = (DrugInventoryWorkRequest)jTable1.getValueAt(selectedRow, 0);
+        HealthcareEquipmentWorkRequest request = (HealthcareEquipmentWorkRequest)jTable1.getValueAt(selectedRow, 0);
         request.setReceiver(ua);
         request.setStatus("Pending");
         request.setTransportrequestStatus("N");

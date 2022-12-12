@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Schema.Enterprise;
-
 import Schema.Role.Role;
 import java.util.ArrayList;
 
@@ -13,13 +12,14 @@ import java.util.ArrayList;
  * @author chandukongara
  */
 public class SupplierEnterprise extends Enterprise{
-    
     public SupplierEnterprise(String name){
         super(name, Enterprise.EnterpriseType.Supplier);
         }
+    
     
     @Override
     public ArrayList<Role> getSupportedRole(){
         return null;
     }
+    
 }

@@ -16,30 +16,31 @@ import java.util.ArrayList;
  */
 public class PharmacyOrganization extends Organization{
 private ArrayList<PharmaInventory> medList;
-
-public PharmacyOrganization(){
-    super(Organization.OrganizationType.Pharmacy.getValue());
-    medList=new ArrayList<PharmaInventory>();
+public PharmacyOrganization()
+ {
+super(Organization.OrganizationType.Pharmacy.getValue());
+medList=new ArrayList<PharmaInventory>();
 }
 
 
 @Override
-public ArrayList<Role> getSupportedRole(){
-    ArrayList<Role> roles = new ArrayList<>();
-    roles.add(new PharmacistRole());
-    return roles;
+public ArrayList<Role> getSupportedRole()
+ {
+ArrayList<Role> roles = new ArrayList<>();
+roles.add(new PharmacistRole());
+return roles;
 }
-
-public ArrayList<PharmaInventory> getMedList(){
-    return medList;
+public ArrayList<PharmaInventory> getMedList()
+ {
+return medList;
 }
-
-public void setMedList(ArrayList<PharmaInventory> medList){
-    this.medList = medList;
+public void setMedList(ArrayList<PharmaInventory> medList)
+{
+this.medList = medList;
 }
-
-public void addMedicine(PharmaInventory mi){
-    medList.add(mi);
+public void addMedicine(PharmaInventory mi)
+{
+medList.add(mi);
 }
 
 }

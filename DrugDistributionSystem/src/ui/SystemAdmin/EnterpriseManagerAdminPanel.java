@@ -254,59 +254,75 @@ public class EnterpriseManagerAdminPanel extends javax.swing.JPanel {
     private void networkCmbBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkCmbBoxActionPerformed
      Network network =(Network) networkCmbBox.getSelectedItem();
      if(network != null){
-    populateEnterpriseComboBox (network);
+populateEnterpriseComboBox (network);
      }// TODO add your handling code here:
     }//GEN-LAST:event_networkCmbBoxActionPerformed
 
     private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
-    Enterprise ent = (Enterprise) enterpriseCmbBox.getSelectedItem();
-    String username = usernameTxtField.getText();
-    String password = String.valueOf(jPasswordField1.getPassword());
-    String name = nameTxtField.getText();
-    if(usernameTxtField.getText().isEmpty() || jPasswordField1.getText().isEmpty() || nameTxtField.getText().isEmpty()){
-            JOptionPane.showMessageDialog(this, "Please Enter All Fields" , "Warning", JOptionPane.ERROR_MESSAGE);
-        }
-    else{
-    for (UserAccount ua: ent.getUserAccountDirectory().getUserAccountList()) {
-        if (ua.getUsername().equals(name)) {
-            JOptionPane.showMessageDialog(this, "Username is already taken, please select a different username");
-            return;
-        }
-    }   
-    Employee employee = ent.getEmployeeDirectory().createEmployee(name);
-    UserAccount ua = ent.getUserAccountDirectory().createUserAccount(username, password, employee, new AdminRole());
-    populateTable();
+Enterprise ent = (Enterprise) enterpriseCmbBox.getSelectedItem();
+String username = usernameTxtField.getText();
+String password = String.valueOf(jPasswordField1.getPassword());
+String name = nameTxtField.getText();
+if(usernameTxtField.getText().isEmpty() || jPasswordField1.getText().isEmpty() || nameTxtField.getText().isEmpty()){
+        JOptionPane.showMessageDialog(this, "Please Enter All Fields" , "Warning", JOptionPane.ERROR_MESSAGE);
+    }
+else{
+
+
+for (UserAccount ua: ent.getUserAccountDirectory().getUserAccountList()) {
+    if (ua.getUsername().equals(name)) {
+        JOptionPane.showMessageDialog(this, "Username is already taken, please select a different username");
+        return;
+    }
+}   
+Employee employee = ent.getEmployeeDirectory().createEmployee(name);
+UserAccount ua = ent.getUserAccountDirectory().createUserAccount(username, password, employee, new AdminRole());
+populateTable();// TODO add your handling code here:
     }//GEN-LAST:event_submitBtnActionPerformed
     }
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
-    userProcessContainer.remove(this);
-    Component[] cmpArray = userProcessContainer.getComponents();
-    Component component = cmpArray[cmpArray.length-1];
-    SystemAdminWorkAreaPanel sysWAJP = (SystemAdminWorkAreaPanel) component;
-    sysWAJP.populateTree();
-    CardLayout card = (CardLayout) userProcessContainer.getLayout();
-    card.previous(userProcessContainer);
+userProcessContainer.remove(this);
+Component[] cmpArray = userProcessContainer.getComponents();
+Component component = cmpArray[cmpArray.length-1];
+SystemAdminWorkAreaPanel sysWAJP = (SystemAdminWorkAreaPanel) component;
+sysWAJP.populateTree();
+CardLayout card = (CardLayout) userProcessContainer.getLayout();
+card.previous(userProcessContainer);
+// TODO add your handling code here:
     }//GEN-LAST:event_backBtnActionPerformed
 
     private void usernameTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTxtFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameTxtFieldActionPerformed
+
     
-    private void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) tblEnterprise.getModel();
-        model.setRowCount(0);
-        for(Network ntw : system.getNetworkList()){
-            for(Enterprise ent : ntw.getEnterpriseDirectory().getEnterpriseList()){
-                for(UserAccount ua : ent.getUserAccountDirectory().getUserAccountList()){
-                    Object[] row = new Object[3];
-                    row[0] = ent.getName();
-                    row[1]= ntw.getName();
-                    row[2] = ua.getUsername();
-                    model.addRow(row);
-                }
-            }
+    
+    
+private void populateTable() {
+DefaultTableModel model = (DefaultTableModel) tblEnterprise.getModel();
+model.setRowCount(0);
+for(Network ntw : system.getNetworkList()){
+    for(Enterprise ent : ntw.getEnterpriseDirectory().getEnterpriseList()){
+        for(UserAccount ua : ent.getUserAccountDirectory().getUserAccountList()){
+            Object[] row = new Object[3];
+            row[0] = ent.getName();
+            row[1]= ntw.getName();
+            row[2] = ua.getUsername();
+            model.addRow(row);
         }
     }
+}
+    }
+
+    private void populateNetworkCOmboBox() {
+        networkCmbBox.removeAllItems();
+        for (Network network : system.getNetworkList()){
+            networkCmbBox.addItem(network);
+        }
+
+    }
+    
+    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -330,18 +346,12 @@ public class EnterpriseManagerAdminPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
 private void populateEnterpriseComboBox(Network ntw) {
-    enterpriseCmbBox.removeAllItems();
-    for(Enterprise enterprise : ntw.getEnterpriseDirectory().getEnterpriseList()){
+    
+        enterpriseCmbBox.removeAllItems();
+        for(Enterprise enterprise : ntw.getEnterpriseDirectory().getEnterpriseList()){
         enterpriseCmbBox.addItem(enterprise);
-    }  
-}
-
-private void populateNetworkCOmboBox() {
-    networkCmbBox.removeAllItems();
-    for (Network network : system.getNetworkList()){
-        networkCmbBox.addItem(network);
     }
-
+    
 }
     
 }

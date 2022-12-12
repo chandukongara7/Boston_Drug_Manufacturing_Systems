@@ -7,7 +7,7 @@ package Schema;
 import Schema.Organization.AdminOrganization;
 import Schema.Supplier.Product;
 import Schema.WorkQueue.DoctorWorkRequest;
-import Schema.WorkQueue.DrugInventoryWorkRequest;
+import Schema.WorkQueue.HealthcareEquipmentWorkRequest;
 import Schema.WorkQueue.PharmacyWorkRequest;
 import java.util.Random;
 
@@ -61,8 +61,8 @@ public class DataGenerator {
         return organisationName[rand.nextInt(organisationName.length)];
     }
     
-    public static DrugInventoryWorkRequest InitMedicalRequest() {
-        DrugInventoryWorkRequest request = new DrugInventoryWorkRequest();
+    public static HealthcareEquipmentWorkRequest InitMedicalRequest() {
+        HealthcareEquipmentWorkRequest request = new HealthcareEquipmentWorkRequest();
         request.setEquipmentName(generateEquipmentName());
         request.setNetwork(generateNetwork());
         return request;

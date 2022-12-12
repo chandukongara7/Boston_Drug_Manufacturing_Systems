@@ -4,14 +4,13 @@
  */
 package ui.DrugInventoryAdmin;
 
-import Schema.Employee.Employee;
-import Schema.Organization.OrganizationDirectory;
-import Schema.Organization.Organization;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import ui.HospitalAdminRole.*;
-
+import Schema.Employee.Employee;
+import Schema.Organization.OrganizationDirectory;
+import Schema.Organization.Organization;
 
 
 
@@ -22,6 +21,7 @@ import ui.HospitalAdminRole.*;
 public class ManageEmployeePanel extends javax.swing.JPanel {
     private OrganizationDirectory organizationDir;
     private JPanel userProcessContainer;
+    
 
     /**
      * Creates new form ManageEmployeePanel
@@ -35,7 +35,6 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
         populateOrganizationEmpComboBox();
         
     }
-    
     public void populateOrganizationComboBox(){
         orgCmbBox.removeAllItems();
         
@@ -259,11 +258,11 @@ public class ManageEmployeePanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);   
     }
-    
     private void orgCmbBoxActionPerformed(java.awt.event.ActionEvent evt){
         Organization organization = (Organization) orgCmbBox.getSelectedItem();
         if (organization != null){
             populateTable(organization);
+        
     }
         
     }

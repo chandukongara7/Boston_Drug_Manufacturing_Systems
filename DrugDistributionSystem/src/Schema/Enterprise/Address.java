@@ -9,7 +9,6 @@ package Schema.Enterprise;
  *
  * @author chandukongara
  */
-
 public class Address {
     private String enterpriseName;
     private String addressLine1;
@@ -24,14 +23,6 @@ public class Address {
         this.enterpriseName = enterpriseName;
     }
 
-    public String getZip() {
-        return zip;
-    }
-
-    public void setZip(String zip) {
-        this.zip = zip;
-    }
-    
     public String getAddressLine1() {
         return addressLine1;
     }
@@ -48,4 +39,13 @@ public class Address {
         this.addressLine2 = addressLine2;
     }
 
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
+    }
+    
+    
 }

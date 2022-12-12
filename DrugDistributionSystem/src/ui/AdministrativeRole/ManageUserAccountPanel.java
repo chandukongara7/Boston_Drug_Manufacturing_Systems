@@ -23,47 +23,49 @@ public class ManageUserAccountPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageUserAccountPanel
      */
-public ManageUserAccountPanel(JPanel upContainer, Enterprise ent) {
-    initComponents();
-    this.ent = ent;
-    this.upContainer = upContainer;
-    populateOrganizationComboBox(); // employeeJComboBox.removeAllItems();
-    populateData();
-}
+    public ManageUserAccountPanel(JPanel upContainer, Enterprise ent) {
+        initComponents();
+        this.ent = ent;
+        this.upContainer = upContainer;
+         populateOrganizationComboBox(); // employeeJComboBox.removeAllItems();
+        populateData();
 
-public void populateOrganizationComboBox() {
-    orgtypeCmbBox.removeAllItems();
-    for (Organization organization : ent.getOrganizationDirectory().getOrganizationList()) {
-        orgtypeCmbBox.addItem(organization);
     }
-}
+        public void populateOrganizationComboBox() {
+            orgtypeCmbBox.removeAllItems();
+
+        for (Organization organization : ent.getOrganizationDirectory().getOrganizationList()) {
+            orgtypeCmbBox.addItem(organization);
+        }}
         
-public void populateEmployeeComboBox(Organization organization){
-    orgtypeCmbBox4.removeAllItems();        
-    for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()){
-        orgtypeCmbBox4.addItem(employee);
-    }
-}
-            
-public void populateRoleComboBox(Organization organization){
-    orgtypeCmbBox1.removeAllItems();
-    for (Role role : organization.getSupportedRole()){
-        orgtypeCmbBox1.addItem(role);
-    }
-}
-
-public void populateData() {
-    DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-    model.setRowCount(0);
-    for (Organization organization : ent.getOrganizationDirectory().getOrganizationList()) {
-        for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
-            Object row[] = new Object[2];
-            row[0] = ua;
-            row[1] = ua.getRole();
-            ((DefaultTableModel) jTable1.getModel()).addRow(row);
+            public void populateEmployeeComboBox(Organization organization){
+        orgtypeCmbBox4.removeAllItems();
+        
+        for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()){
+            orgtypeCmbBox4.addItem(employee);
         }
     }
-}
+            
+        public void populateRoleComboBox(Organization organization){
+        orgtypeCmbBox1.removeAllItems();
+        for (Role role : organization.getSupportedRole()){
+            orgtypeCmbBox1.addItem(role);
+        }
+    }
+
+    public void populateData() {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+
+        model.setRowCount(0);
+
+        for (Organization organization : ent.getOrganizationDirectory().getOrganizationList()) {
+            for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
+                Object row[] = new Object[2];
+                row[0] = ua;
+                row[1] = ua.getRole();
+                ((DefaultTableModel) jTable1.getModel()).addRow(row);
+            }
+        }}
 
 
     /**
@@ -296,13 +298,13 @@ public void populateData() {
     }//GEN-LAST:event_orgtypeCmbBox1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String userName = jTextField1.getText();
-        String password = jTextField2.getText();
-        Organization organization = (Organization) orgtypeCmbBox.getSelectedItem();
-        Employee employee = (Employee) orgtypeCmbBox4.getSelectedItem();
-        Role role = (Role) orgtypeCmbBox1.getSelectedItem();
-        organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
-        populateData();
+String userName = jTextField1.getText();
+String password = jTextField2.getText();
+Organization organization = (Organization) orgtypeCmbBox.getSelectedItem();
+Employee employee = (Employee) orgtypeCmbBox4.getSelectedItem();
+Role role = (Role) orgtypeCmbBox1.getSelectedItem();
+organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
+populateData();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
